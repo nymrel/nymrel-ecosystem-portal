@@ -123,11 +123,11 @@ export const DualAudienceFooter: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="mailto:contact@jalenbuilds.com"
+                  href="mailto:contact@nymrel.com"
                   style={{ color: 'var(--nym-text-secondary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}
                 >
                   <Mail size={14} color="var(--nym-text-muted)" />
-                  <span>contact@jalenbuilds.com</span>
+                  <span>contact@nymrel.com</span>
                 </a>
               </li>
               <li>

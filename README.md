@@ -125,7 +125,7 @@ npm run build
 ## 🔒 Security & Dual-Audience Governance
 
 - **Entity Hierarchy**: `parentOrganization: Nymrel -> JalenBuilds LLC`
-- **Contact Email**: `contact@jalenbuilds.com`
+- **Contact Email**: `contact@nymrel.com`
 - **LLM Context**: Available live at `/llms.txt`
 - **Robots Posture**: `OAI-SearchBot` and verified AI search crawlers explicitly enabled.
 

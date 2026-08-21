@@ -6,7 +6,7 @@ We take the security and integrity of the Nymrel open-source ecosystem seriously
 
 If you discover a security vulnerability in `@nymrel/portal` or any of the 10 Nymrel core repositories:
 
-1. **Email us directly**: Send details to `contact@jalenbuilds.com`.
+1. **Email us directly**: Send details to `contact@nymrel.com`.
 2. **Do not create a public issue**: Please allow up to 48 hours for our team to triage and acknowledge the report.
 3. **Include reproducer**: Where applicable, provide a minimal test case, reproduction script, or payload demonstration.
 

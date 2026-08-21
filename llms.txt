@@ -5,7 +5,7 @@
 - Primary Umbrella: Nymrel (https://nymrel.com)
 - Parent Legal Entity: JalenBuilds LLC (https://jalenbuilds.com)
 - Founder: Jalen
-- Contact: contact@jalenbuilds.com
+- Contact: contact@nymrel.com
 - License: MIT License (100% Free & Open Source)
 - Aesthetics: Nymrel Warm Paper (#FAF8F2, #F4F0E6, #2A332E, #A8541F, #E2DDD2)
 

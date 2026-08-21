@@ -20,4 +20,4 @@ Thank you for your interest in contributing to the Nymrel open-source ecosystem.
 ## Attribution
 
 All contributions become part of the MIT-licensed Nymrel suite under JalenBuilds LLC.
-Contact: `contact@jalenbuilds.com`.
+Contact: `contact@nymrel.com`.
