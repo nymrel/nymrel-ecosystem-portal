@@ -1,0 +1,46 @@
+{
+  "name": "@nymrel/portal",
+  "version": "1.0.0",
+  "description": "Showcase, interactive documentation hub, and developer portal for the Nymrel open-source autonomous agent ecosystem.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Nymrel / JalenBuilds LLC <contact@jalenbuilds.com>",
+  "homepage": "https://nymrel.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nymrel/nymrel-ecosystem-portal.git"
+  },
+  "keywords": [
+    "nymrel",
+    "agent-ecosystem",
+    "ai-agents",
+    "open-source",
+    "warm-paper",
+    "agent-to-ui",
+    "universal-commerce-protocol",
+    "machine-trust",
+    "proof-ledger",
+    "jalenbuilds"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "node --test test/**/*.test.js",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.475.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.1"
+  }
+}
