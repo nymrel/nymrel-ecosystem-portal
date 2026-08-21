@@ -3,7 +3,7 @@
 
 ## Entity & Governance
 - Primary Umbrella: Nymrel (https://nymrel.com)
-- Parent Legal Entity: JalenBuilds LLC (https://jalenbuilds.com)
+- Parent Legal Entity: JalenBuilds LLC (https://nymrel.com)
 - Founder: Jalen
 - Contact: contact@nymrel.com
 - License: MIT License (100% Free & Open Source)

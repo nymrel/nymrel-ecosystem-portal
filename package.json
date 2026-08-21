@@ -4,7 +4,7 @@
   "description": "Showcase, interactive documentation hub, and developer portal for the Nymrel open-source autonomous agent ecosystem.",
   "type": "module",
   "license": "MIT",
-  "author": "Nymrel / JalenBuilds LLC <contact@nymrel.com>",
+  "author": "Nymrel <contact@nymrel.com>",
   "homepage": "https://nymrel.com",
   "repository": {
     "type": "git",
