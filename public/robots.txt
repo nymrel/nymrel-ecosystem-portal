@@ -1,0 +1,23 @@
+# Robots.txt for Nymrel Ecosystem Portal
+# Dual-Audience Machine Discoverability Contract
+
+User-agent: *
+Allow: /
+Disallow: /api/private/
+
+# Explicit Autonomous AI Agent & SearchBot Permissions
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Canonical LLM Directives & Sitemap
+# LLM knowledge graph: https://nymrel.com/llms.txt
+Sitemap: https://nymrel.com/sitemap.xml
