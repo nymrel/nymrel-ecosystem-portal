@@ -191,7 +191,7 @@ export const Header: React.FC<HeaderProps> = ({
             aria-label="Nymrel GitHub Organization"
           >
             <Github size={18} />
-            <span style={{ fontSize: '12px', fontWeight: 600 }}>{ECOSYSTEM_METRICS.starsTotal.toLocaleString()}+</span>
+            <span style={{ fontSize: '12px', fontWeight: 600 }}>{ECOSYSTEM_METRICS.totalRepos}</span>
           </a>
         </div>
       </div>

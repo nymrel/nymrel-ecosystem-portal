@@ -25,7 +25,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "test": "node --test test/**/*.test.js",
+    "sync-llms": "node --experimental-strip-types scripts/generate-llms.mjs",
+    "test": "node --experimental-strip-types --test test/**/*.test.js",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build && npm test"

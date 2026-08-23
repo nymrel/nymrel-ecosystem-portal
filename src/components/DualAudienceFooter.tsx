@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Cpu, FileText, Globe, Mail, Github } from 'lucide-react';
+import { ECOSYSTEM_METRICS } from '../data/ecosystem';
 
 export const DualAudienceFooter: React.FC = () => {
   return (
@@ -61,7 +62,7 @@ export const DualAudienceFooter: React.FC = () => {
               color: 'var(--nym-text-muted)'
             }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#059669', display: 'inline-block' }}></span>
-              <span>All 10 Core Engines 100% Green &amp; MIT Licensed</span>
+              <span>{ECOSYSTEM_METRICS.totalRepos} Open-Source Repositories · Permissively Licensed</span>
             </div>
           </div>
 

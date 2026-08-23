@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Terminal, Copy, Check, Sparkles, Shield, Cpu, ArrowDown } from 'lucide-react';
+import { ECOSYSTEM_REPOSITORIES } from '../data/ecosystem';
 
 interface HeroSectionProps {
   onExploreClick: () => void;
@@ -13,7 +14,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onQuickstartClick
 }) => {
   const [copied, setCopied] = useState(false);
-  const installCmd = 'npm install @nymrel/open-ucp @nymrel/agent-surety @nymrel/proof-ledger';
+  const repoCount = ECOSYSTEM_REPOSITORIES.length;
+  const installCmd = 'git clone https://github.com/nymrel/nymrel-ecosystem-portal.git';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCmd);
@@ -138,7 +140,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="nym-btn-primary"
             style={{ padding: '12px 24px' }}
           >
-            <span>Explore 10 Repositories</span>
+            <span>Explore {repoCount} Repositories</span>
             <ArrowDown size={15} />
           </button>
 
@@ -174,7 +176,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         }}>
           <div>
             <div style={{ fontSize: '24px', fontWeight: 700, color: 'var(--nym-cedar)', fontFamily: 'var(--nym-font-serif)' }}>
-              10 Repos
+              {repoCount} Repos
             </div>
             <div style={{ fontSize: '12px', color: 'var(--nym-text-muted)', fontWeight: 500 }}>
               Autonomous Agent Suite

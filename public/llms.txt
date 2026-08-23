@@ -6,67 +6,175 @@
 - Parent Legal Entity: JalenBuilds LLC (https://nymrel.com)
 - Founder: Jalen
 - Contact: contact@nymrel.com
-- License: MIT License (100% Free & Open Source)
+- Licenses: MIT and Apache-2.0 (100% Free & Open Source)
 - Aesthetics: Nymrel Warm Paper (#FAF8F2, #F4F0E6, #2A332E, #A8541F, #E2DDD2)
 
-## 10 Flagship Open-Source Repositories
+## Catalog: 28 Public Repositories (synced 2026-08-23)
 
-### 1. Swarm Studio (@nymrel/swarm-studio)
-- Category: Agents & Swarms
+### Agents & Swarms
+
+#### 1. Swarm Studio (@nymrel/swarm-studio)
 - Repository: https://github.com/nymrel/nymrel-swarm-studio
-- Description: Visual command deck for multi-agent coding swarms with Warm Paper aesthetics, Google A2UI v0.8 streaming components, real-time agent topology, and Action Surety Merkle logs.
-- Install: npm install @nymrel/swarm-studio
+- Description: Visual command deck for multi-agent coding swarms with Warm Paper aesthetics and A2UI streaming components.
+- Install: git clone https://github.com/nymrel/nymrel-swarm-studio.git
 
-### 2. OpenUCP (@nymrel/open-ucp)
-- Category: Commerce & Micropayments
-- Repository: https://github.com/nymrel/open-ucp
-- Description: Zero-dependency Universal Commerce Protocol (UCP) & Agentic Purchasing Engine for TypeScript and Node.js with x402 HTTP micropayments and AP2 negotiation.
-- Install: npm install @nymrel/open-ucp
-
-### 3. Agent Sandstorm (@nymrel/agent-sandstorm)
-- Category: Security & Sandboxing
-- Repository: https://github.com/nymrel/agent-sandstorm
-- Description: Zero-Trust Agent Execution Sandbox & Copy-on-Write Workspace Isolation Engine with automated rollback, spend limiters, and secret exfiltration prevention.
-- Install: npm install @nymrel/agent-sandstorm
-
-### 4. UCP Scanner (agentic-ucp-scanner)
-- Category: Commerce & Micropayments
-- Repository: https://github.com/nymrel/agentic-ucp-scanner
-- Description: Zero-dependency CLI & library to audit websites for AI Agent Commerce Readiness, UCP, JSON-LD Machine Trust, and autonomous purchasing capabilities.
-- Install: npm install agentic-ucp-scanner
-
-### 5. A2UI Warm Paper (a2ui-warm-paper)
-- Category: UI & Machine Trust
-- Repository: https://github.com/nymrel/a2ui-warm-paper
-- Description: Google A2UI (Agent-to-UI) declarative JSON specification component system with Nymrel's signature Warm Paper design aesthetic for human-in-the-loop agent workflows.
-- Install: npm install a2ui-warm-paper
-
-### 6. Agent Surety (@nymrel/agent-surety)
-- Category: Security & Sandboxing
-- Repository: https://github.com/nymrel/agent-action-surety
-- Description: Zero-dependency execution firewall, path sandbox, command interceptor, and cryptographic audit ledger for AI coding agents and autonomous tool-calling swarms.
-- Install: npm install @nymrel/agent-surety
-
-### 7. Machine Trust (@nymrel/machine-trust)
-- Category: UI & Machine Trust
-- Repository: https://github.com/nymrel/nymrel-machine-trust
-- Description: Dual-Audience Machine Trust & AI Search Discoverability Engine generating Schema.org JSON-LD entity graphs, valid robots.txt, and /llms.txt for autonomous agent discovery.
-- Install: npm install @nymrel/machine-trust
-
-### 8. Proof Ledger (@nymrel/proof-ledger)
-- Category: Security & Sandboxing
-- Repository: https://github.com/nymrel/nymrel-proof-ledger
-- Description: Zero-dependency dual-language cryptographic attestation and proof-of-execution protocol library with RFC-6962 Merkle trees and Ed25519 signatures.
-- Install: npm install @nymrel/proof-ledger
-
-### 9. Local Forge (@nymrel/local-forge)
-- Category: Agents & Swarms
+#### 2. Local Forge (@nymrel/local-forge)
 - Repository: https://github.com/nymrel/local-agent-forge
-- Description: Zero-cloud local GPU orchestrator, dynamic model router (Luna/Terra/Sol), and MCP server for agentic workflows with real-time token savings tracking.
-- Install: npm install @nymrel/local-forge
+- Description: Zero-cloud local GPU orchestrator, dynamic model router, and MCP server for agentic workflows.
+- Install: git clone https://github.com/nymrel/local-agent-forge.git
 
-### 10. Headless Quote Layer (@nymrel/headless-quote)
-- Category: Commerce & Micropayments
+#### 3. BuilderWars (builderwars)
+- Repository: https://github.com/nymrel/builderwars
+- Homepage: https://nymrel.com/builderwars
+- Description: Same model. Your harness. A contest between harnesses with one-command replay verification.
+- Install: git clone https://github.com/nymrel/builderwars.git
+
+#### 4. Crawler Mesh (@nymrel/crawler-mesh)
+- Repository: https://github.com/nymrel/nymrel-crawler-mesh
+- Description: Zero-telemetry, high-throughput web crawler and clean markdown extractor built for AI agents and LLMs.
+- Install: git clone https://github.com/nymrel/nymrel-crawler-mesh.git
+
+#### 5. Website Audit Plugin (@nymrel/website-audit-plugin)
+- Repository: https://github.com/nymrel/nymrel-plugin
+- Description: Nymrel universal plugin for ChatGPT, Codex, Claude, and MCP hosts.
+- Install: git clone https://github.com/nymrel/nymrel-plugin.git
+
+#### 6. Agent Beacon (@nymrel/agent-beacon)
+- Repository: https://github.com/nymrel/agent-beacon
+- Description: Zero-dependency liveness sentinel, heartbeat monitor, and dead-man switch watchdog mesh for AI coding fleets.
+- Install: git clone https://github.com/nymrel/agent-beacon.git
+
+#### 7. MCP Hub (@nymrel/mcp-hub)
+- Repository: https://github.com/nymrel/nymrel-mcp-hub
+- Description: Unified Model Context Protocol server aggregating Nymrel toolchains for Claude, Cursor, Codex, and OpenAI agents.
+- Install: git clone https://github.com/nymrel/nymrel-mcp-hub.git
+
+#### 8. Swarm Protocol (@nymrel/swarm-protocol)
+- Repository: https://github.com/nymrel/nymrel-swarm-protocol
+- Description: Universal multi-agent swarm protocol, two-seat command studio contract, and file-based bus engine.
+- Install: git clone https://github.com/nymrel/nymrel-swarm-protocol.git
+
+#### 9. Presence (presence-rail)
+- Repository: https://github.com/nymrel/presence
+- Homepage: https://nymrel.com/presence
+- Description: An agent hits a step that needs a human. Presence pauses it, buzzes a phone, and resumes once the person has acted.
+- Install: git clone https://github.com/nymrel/presence.git
+
+### Commerce & Micropayments
+
+#### 10. OpenUCP (@nymrel/open-ucp)
+- Repository: https://github.com/nymrel/open-ucp
+- Description: Zero-dependency Universal Commerce Protocol (UCP) & Agentic Purchasing Engine with x402 micropayments.
+- Install: git clone https://github.com/nymrel/open-ucp.git
+
+#### 11. UCP Scanner (agentic-ucp-scanner)
+- Repository: https://github.com/nymrel/agentic-ucp-scanner
+- Description: Zero-dependency CLI & audit engine to verify websites for AI Agent Commerce Readiness and JSON-LD trust.
+- Install: git clone https://github.com/nymrel/agentic-ucp-scanner.git
+
+#### 12. Headless Quote Layer (@nymrel/headless-quote)
 - Repository: https://github.com/nymrel/headless-quote-layer
-- Description: Zero-dependency embeddable visual quote calculator, dynamic range estimator, and lead capture engine with Nymrel Warm Paper aesthetics.
-- Install: npm install @nymrel/headless-quote
+- Description: Zero-dependency visual quote calculator, dynamic range estimator, and lead capture engine.
+- Install: git clone https://github.com/nymrel/headless-quote-layer.git
+
+### Security & Sandboxing
+
+#### 13. Agent Sandstorm (@nymrel/agent-sandstorm)
+- Repository: https://github.com/nymrel/agent-sandstorm
+- Description: Zero-Trust Agent Execution Sandbox & Copy-on-Write Workspace Isolation Engine with instant rollback.
+- Install: git clone https://github.com/nymrel/agent-sandstorm.git
+
+#### 14. Agent Surety (agent-action-surety)
+- Repository: https://github.com/nymrel/agent-action-surety
+- Description: Deny-by-default execution safety envelope and cryptographic SHA-256 Merkle ledger for AI coding swarms.
+- Install: git clone https://github.com/nymrel/agent-action-surety.git
+
+#### 15. Proof Ledger (@nymrel/proof-ledger)
+- Repository: https://github.com/nymrel/nymrel-proof-ledger
+- Description: Zero-dependency dual-language cryptographic attestation and proof-of-execution protocol library.
+- Install: git clone https://github.com/nymrel/nymrel-proof-ledger.git
+
+#### 16. PermitMesh (PermitMesh)
+- Repository: https://github.com/nymrel/PermitMesh
+- Homepage: https://nymrel.com
+- Description: A portable policy-decision profile for AI agents changing software. PDP, not PEP.
+- Install: git clone https://github.com/nymrel/PermitMesh.git
+
+#### 17. Agent Proofchain (agent-proofchain)
+- Repository: https://github.com/nymrel/agent-proofchain
+- Homepage: https://nymrel.com
+- Description: Provider-neutral admission decisions and tamper-evident action receipts for AI agents.
+- Install: git clone https://github.com/nymrel/agent-proofchain.git
+
+### UI & Machine Trust
+
+#### 18. A2UI Warm Paper (a2ui-warm-paper)
+- Repository: https://github.com/nymrel/a2ui-warm-paper
+- Description: Google A2UI (Agent-to-UI) declarative JSON specification component system in Nymrel Warm Paper aesthetics.
+- Install: git clone https://github.com/nymrel/a2ui-warm-paper.git
+
+#### 19. Machine Trust (@nymrel/machine-trust)
+- Repository: https://github.com/nymrel/nymrel-machine-trust
+- Description: Dual-Audience Machine Trust & AI Search Discoverability Engine for modern web applications.
+- Install: git clone https://github.com/nymrel/nymrel-machine-trust.git
+
+#### 20. Trust Scorecard (@nymrel/trust-scorecard)
+- Repository: https://github.com/nymrel/nymrel-trust-scorecard
+- Description: AI readiness and machine trust scorecard web application in Nymrel Warm Paper design.
+- Install: git clone https://github.com/nymrel/nymrel-trust-scorecard.git
+
+#### 21. AI Visibility Scorecard (ai-visibility-scorecard)
+- Repository: https://github.com/nymrel/ai-visibility-scorecard
+- Homepage: https://nymrel.com/tools/ai-visibility-scorecard
+- Description: Grade how findable your site is to ChatGPT, Claude, and Perplexity, with fixes ranked by impact.
+- Install: git clone https://github.com/nymrel/ai-visibility-scorecard.git
+
+#### 22. ChatGPT Recommends (chatgpt-recommends)
+- Repository: https://github.com/nymrel/chatgpt-recommends
+- Homepage: https://nymrel.com/tools/chatgpt-recommends
+- Description: Check whether ChatGPT recommends your business: three buyer-intent prompts, paste the answers, get a scored verdict.
+- Install: git clone https://github.com/nymrel/chatgpt-recommends.git
+
+#### 23. JSON-LD Generator (json-ld-generator)
+- Repository: https://github.com/nymrel/json-ld-generator
+- Homepage: https://nymrel.com/tools/json-ld-generator
+- Description: Generate schema.org JSON-LD for LocalBusiness, Product, FAQ and more, or check markup you already have.
+- Install: git clone https://github.com/nymrel/json-ld-generator.git
+
+#### 24. llms.txt Generator (llms-txt-generator)
+- Repository: https://github.com/nymrel/llms-txt-generator
+- Homepage: https://nymrel.com/tools/llms-txt-generator
+- Description: Build a publish-ready llms.txt — a short map of your site that AI assistants can read in one pass.
+- Install: git clone https://github.com/nymrel/llms-txt-generator.git
+
+### Developer Tools
+
+#### 25. Noop Flags (noop-flags)
+- Repository: https://github.com/nymrel/noop-flags
+- Homepage: https://nymrel.com
+- Description: Find the CLI flags your program accepts and never reads. One file, no dependencies.
+- Install: git clone https://github.com/nymrel/noop-flags.git
+
+#### 26. Token Spend Dashboard (token-spend-dashboard)
+- Repository: https://github.com/nymrel/token-spend-dashboard
+- Homepage: https://nymrel.com/tools/token-spend-dashboard
+- Description: Paste an Anthropic or OpenAI usage export and get a spend dashboard by day and model. Nothing leaves your device.
+- Install: git clone https://github.com/nymrel/token-spend-dashboard.git
+
+#### 27. QR UTM Generator (qr-utm-generator)
+- Repository: https://github.com/nymrel/qr-utm-generator
+- Homepage: https://nymrel.com/tools/qr-utm-generator
+- Description: QR codes with UTM tracking built into the link, so you know which flyer brought them in.
+- Install: git clone https://github.com/nymrel/qr-utm-generator.git
+
+#### 28. Ecosystem Portal (@nymrel/portal)
+- Repository: https://github.com/nymrel/nymrel-ecosystem-portal
+- Description: This portal: the official open-source showcase, documentation hub, and interactive catalog for the Nymrel agent suite.
+- Install: git clone https://github.com/nymrel/nymrel-ecosystem-portal.git
+
+## Machine Discoverability & AI Crawlers
+- OAI-SearchBot: Allowed
+- ClaudeBot: Allowed
+- GPTBot: Training disallow, Search allow
+- PerplexityBot: Allowed
+- Sitemap: https://nymrel.com/sitemap.xml

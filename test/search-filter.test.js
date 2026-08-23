@@ -6,10 +6,11 @@ import { ECOSYSTEM_REPOSITORIES } from '../src/data/ecosystem.ts';
 describe('Portal Search & Filter Engine Tests', () => {
   it('should filter correctly by category', () => {
     const agents = ECOSYSTEM_REPOSITORIES.filter(r => r.category === 'Agents & Swarms');
-    assert.strictEqual(agents.length, 2); // Swarm Studio, Local Forge
+    assert.strictEqual(agents.length, 9); // Swarm Studio, Local Forge, BuilderWars, Crawler Mesh, Plugin, Beacon, MCP Hub, Swarm Protocol, Presence
     const agentIds = agents.map(a => a.id);
-    assert.ok(agentIds.includes('swarm-studio'));
-    assert.ok(agentIds.includes('local-agent-forge'));
+    for (const id of ['swarm-studio', 'local-agent-forge', 'builderwars', 'crawler-mesh', 'nymrel-plugin', 'agent-beacon', 'mcp-hub', 'swarm-protocol', 'presence']) {
+      assert.ok(agentIds.includes(id), `Agents & Swarms missing: ${id}`);
+    }
 
     const commerce = ECOSYSTEM_REPOSITORIES.filter(r => r.category === 'Commerce & Micropayments');
     assert.strictEqual(commerce.length, 3); // OpenUCP, UCP Scanner, Headless Quote Layer
@@ -19,17 +20,25 @@ describe('Portal Search & Filter Engine Tests', () => {
     assert.ok(commerceIds.includes('headless-quote-layer'));
 
     const security = ECOSYSTEM_REPOSITORIES.filter(r => r.category === 'Security & Sandboxing');
-    assert.strictEqual(security.length, 3); // Agent Sandstorm, Agent Surety, Proof Ledger
+    assert.strictEqual(security.length, 5); // Agent Sandstorm, Agent Surety, Proof Ledger, PermitMesh, Agent Proofchain
     const secIds = security.map(s => s.id);
-    assert.ok(secIds.includes('agent-sandstorm'));
-    assert.ok(secIds.includes('agent-action-surety'));
-    assert.ok(secIds.includes('nymrel-proof-ledger'));
+    for (const id of ['agent-sandstorm', 'agent-action-surety', 'nymrel-proof-ledger', 'permitmesh', 'agent-proofchain']) {
+      assert.ok(secIds.includes(id), `Security & Sandboxing missing: ${id}`);
+    }
 
     const uiTrust = ECOSYSTEM_REPOSITORIES.filter(r => r.category === 'UI & Machine Trust');
-    assert.strictEqual(uiTrust.length, 2); // A2UI Warm Paper, Machine Trust
+    assert.strictEqual(uiTrust.length, 7); // A2UI Warm Paper, Machine Trust, Trust Scorecard, AI Visibility, ChatGPT Recommends, JSON-LD Generator, llms.txt Generator
     const uiIds = uiTrust.map(u => u.id);
-    assert.ok(uiIds.includes('a2ui-warm-paper'));
-    assert.ok(uiIds.includes('nymrel-machine-trust'));
+    for (const id of ['a2ui-warm-paper', 'nymrel-machine-trust', 'trust-scorecard', 'ai-visibility-scorecard', 'chatgpt-recommends', 'json-ld-generator', 'llms-txt-generator']) {
+      assert.ok(uiIds.includes(id), `UI & Machine Trust missing: ${id}`);
+    }
+
+    const devTools = ECOSYSTEM_REPOSITORIES.filter(r => r.category === 'Developer Tools');
+    assert.strictEqual(devTools.length, 4); // Noop Flags, Token Spend Dashboard, QR UTM Generator, Ecosystem Portal
+    const devIds = devTools.map(d => d.id);
+    for (const id of ['noop-flags', 'token-spend-dashboard', 'qr-utm-generator', 'ecosystem-portal']) {
+      assert.ok(devIds.includes(id), `Developer Tools missing: ${id}`);
+    }
   });
 
   it('should match search query across name, package, tags, and features', () => {

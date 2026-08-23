@@ -72,7 +72,9 @@ export const ToolDetailModal: React.FC<ToolDetailModalProps> = ({ repo, onClose 
         <div style={{ marginBottom: '24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', flexWrap: 'wrap' }}>
             <span className="nym-badge nym-badge-terracotta">{repo.category}</span>
-            <span className="nym-badge nym-badge-cedar">{repo.version}</span>
+            {repo.version && (
+              <span className="nym-badge nym-badge-cedar">{repo.version}</span>
+            )}
             <span className="nym-badge nym-badge-neutral">{repo.license} License</span>
             {repo.zeroDependency && (
               <span className="nym-badge nym-badge-amber">Zero-Dependency</span>
@@ -182,6 +184,18 @@ export const ToolDetailModal: React.FC<ToolDetailModalProps> = ({ repo, onClose 
 
         {/* Footer Actions */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '12px', flexWrap: 'wrap' }}>
+          {repo.homepageUrl && (
+            <a
+              href={repo.homepageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nym-btn-secondary"
+              style={{ fontSize: '13px' }}
+            >
+              <ExternalLink size={15} />
+              <span>Open Tool</span>
+            </a>
+          )}
           {repo.npmUrl && (
             <a
               href={repo.npmUrl}

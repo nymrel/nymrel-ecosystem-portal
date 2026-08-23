@@ -57,7 +57,8 @@ export const ToolGrid: React.FC<ToolGridProps> = ({ searchQuery, onClearSearch }
       'Agents & Swarms': 0,
       'Commerce & Micropayments': 0,
       'Security & Sandboxing': 0,
-      'UI & Machine Trust': 0
+      'UI & Machine Trust': 0,
+      'Developer Tools': 0
     };
     ECOSYSTEM_REPOSITORIES.forEach(repo => {
       counts[repo.category] = (counts[repo.category] || 0) + 1;
@@ -248,17 +249,19 @@ export const ToolGrid: React.FC<ToolGridProps> = ({ searchQuery, onClearSearch }
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span style={{
-                      fontSize: '11px',
-                      fontFamily: 'var(--nym-font-mono)',
-                      color: 'var(--nym-text-muted)',
-                      backgroundColor: 'var(--nym-bg-surface)',
-                      padding: '2px 6px',
-                      borderRadius: '4px',
-                      border: '1px solid var(--nym-border-default)'
-                    }}>
-                      {repo.version}
-                    </span>
+                    {repo.version && (
+                      <span style={{
+                        fontSize: '11px',
+                        fontFamily: 'var(--nym-font-mono)',
+                        color: 'var(--nym-text-muted)',
+                        backgroundColor: 'var(--nym-bg-surface)',
+                        padding: '2px 6px',
+                        borderRadius: '4px',
+                        border: '1px solid var(--nym-border-default)'
+                      }}>
+                        {repo.version}
+                      </span>
+                    )}
                   </div>
                 </div>
 
