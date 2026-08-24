@@ -86,7 +86,7 @@ export const DualAudienceFooter: React.FC = () => {
               fontSize: '11px',
               lineHeight: 1.5
             }}>
-              parentOrganization: Nymrel &rarr; JalenBuilds LLC<br />
+              Organization: name "Nymrel", legalName "JalenBuilds LLC"<br />
               schema: https://schema.org/SoftwareApplication<br />
               crawlerPosture: OAI-SearchBot ALLOWED
             </div>
