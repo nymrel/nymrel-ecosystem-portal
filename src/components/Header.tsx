@@ -90,7 +90,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </span>
               </div>
               <span style={{ fontSize: '11px', color: 'var(--nym-text-muted)', display: 'block', marginTop: '-2px' }}>
-                Open-Source Agent Suite · JalenBuilds LLC
+                Open-Source Agent Suite
               </span>
             </div>
           </a>

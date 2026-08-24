@@ -28,21 +28,24 @@ export const QuickstartDrawer: React.FC<QuickstartDrawerProps> = ({ isOpen, onCl
   const currentRepo = ECOSYSTEM_REPOSITORIES.find(r => r.id === selectedRepoId) || ECOSYSTEM_REPOSITORIES[0];
 
   const getCommand = () => {
+    // Registry packages are rolling out; until they resolve, source install is
+    // the honest default. Keep in sync with each repo's README install note.
+    const sourceNote = `# Registry package rolling out — install from source today:\n# git clone ${currentRepo.githubUrl}.git && cd ${currentRepo.githubUrl.split('/').pop()} && npm install`;
     switch (activeTab) {
       case 'npm':
-        return `npm install ${currentRepo.packageName}`;
+        return `${sourceNote}\n\nnpm install ${currentRepo.packageName}   # once published`;
       case 'pnpm':
-        return `pnpm add ${currentRepo.packageName}`;
+        return `${sourceNote}\n\npnpm add ${currentRepo.packageName}   # once published`;
       case 'bun':
-        return `bun add ${currentRepo.packageName}`;
+        return `${sourceNote}\n\nbun add ${currentRepo.packageName}   # once published`;
       case 'pip':
-        return currentRepo.pypiUrl ? `pip install ${currentRepo.id}` : `# Note: ${currentRepo.name} is primarily distributed on npm\nnpm install ${currentRepo.packageName}`;
+        return currentRepo.pypiUrl ? `# PyPI package rolling out — see repo README for source install\npip install ${currentRepo.id}` : `# Note: ${currentRepo.name} is primarily distributed on npm\n${sourceNote}`;
       case 'git':
         return `git clone ${currentRepo.githubUrl}.git\ncd ${currentRepo.githubUrl.split('/').pop()}\nnpm install\nnpm test`;
       case 'cdn':
-        return `<script src="https://unpkg.com/${currentRepo.packageName}/dist/index.min.js"></script>`;
+        return `<!-- CDN bundle rolling out; until then use the git source install -->\n<script src="https://unpkg.com/${currentRepo.packageName}/dist/index.min.js"></script>`;
       default:
-        return `npm install ${currentRepo.packageName}`;
+        return `${sourceNote}\n\nnpm install ${currentRepo.packageName}   # once published`;
     }
   };
 

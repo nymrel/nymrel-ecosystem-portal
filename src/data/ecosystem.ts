@@ -220,7 +220,7 @@ export const ECOSYSTEM_REPOSITORIES: EcosystemRepo[] = [
     badges: ['v1.0.0', 'MIT', 'Dual-Audience', 'JSON-LD Graph', 'OAI-SearchBot'],
     features: [
       'Dual-Audience rule enforcer: stunning human UX + verifiable machine trust',
-      'Automated parentOrganization graph generator (Nymrel -> JalenBuilds LLC)',
+      'Canonical Organization identity generator (name: Nymrel, legalName: JalenBuilds LLC)',
       'Crawler matrix manager for OpenAI, Anthropic, Google, and Perplexity',
       'LLM context extractor creating concise, structured /llms.txt files'
     ],
@@ -751,7 +751,7 @@ export const ECOSYSTEM_METRICS = {
   apacheLicensed: 1,
   categoriesCount: 5,
   starsTotal: 0,
-  primaryEntities: 'Nymrel -> JalenBuilds LLC',
+  primaryEntities: 'Nymrel (legalName: JalenBuilds LLC)',
   designTheme: 'Warm Paper (#FAF8F2, #2A332E, #A8541F)',
   catalogSyncedAt: '2026-08-23'
 };
