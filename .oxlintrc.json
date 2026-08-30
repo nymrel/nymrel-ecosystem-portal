@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error",
+    "perf": "error",
+    "suspicious": "error"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "oxc",
+    "react",
+    "react-perf",
+    "typescript",
+    "unicorn"
+  ],
+  "settings": {
+    "react": {
+      "version": "19.2"
+    }
+  },
+  "rules": {
+    "import/no-named-as-default": "off",
+    "import/no-unassigned-import": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-no-target-blank": "error",
+    "react/no-array-index-key": "off",
+    "react-perf/jsx-no-new-function-as-prop": "off",
+    "unicorn/consistent-function-scoping": "off",
+    "unicorn/prefer-set-has": "off"
+  }
+}

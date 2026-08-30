@@ -1,180 +1,379 @@
-# Nymrel Open-Source Ecosystem Portal
-> The Open Operating Layer for Autonomous AI Agents, Swarms & Modern Web
+# Nymrel Public Source Catalog
+> Evidence-bounded metadata for public repositories in the Nymrel GitHub organization.
 
-## Entity & Governance
-- Primary Umbrella: Nymrel (https://nymrel.com)
-- Parent Legal Entity: JalenBuilds LLC (https://nymrel.com)
-- Founder: Jalen
+## Entity
+- Company brand: Nymrel (https://nymrel.com)
+- Legal entity: JalenBuilds LLC
 - Contact: contact@nymrel.com
-- Licenses: MIT and Apache-2.0 (100% Free & Open Source)
-- Aesthetics: Nymrel Warm Paper (#FAF8F2, #F4F0E6, #2A332E, #A8541F, #E2DDD2)
 
-## Catalog: 28 Public Repositories (synced 2026-08-23)
+## Evidence boundary
+- Repository descriptions are owner-supplied GitHub metadata, not independent portal validation.
+- Source presence does not prove package publication, deployment, adoption, customer activation, or revenue.
+- Registry, license, validation, adoption, and revenue states remain unassessed unless stated otherwise.
+
+## Catalog snapshot
+- Public repositories: 29
+- Source inventory checked: 2026-08-30
+- Latest GitHub releases observed: 1
 
 ### Agents & Swarms
 
-#### 1. Swarm Studio (@nymrel/swarm-studio)
-- Repository: https://github.com/nymrel/nymrel-swarm-studio
-- Description: Visual command deck for multi-agent coding swarms with Warm Paper aesthetics and A2UI streaming components.
-- Install: git clone https://github.com/nymrel/nymrel-swarm-studio.git
-
-#### 2. Local Forge (@nymrel/local-forge)
-- Repository: https://github.com/nymrel/local-agent-forge
-- Description: Zero-cloud local GPU orchestrator, dynamic model router, and MCP server for agentic workflows.
-- Install: git clone https://github.com/nymrel/local-agent-forge.git
-
-#### 3. BuilderWars (builderwars)
-- Repository: https://github.com/nymrel/builderwars
-- Homepage: https://nymrel.com/builderwars
-- Description: Same model. Your harness. A contest between harnesses with one-command replay verification.
-- Install: git clone https://github.com/nymrel/builderwars.git
-
-#### 4. Crawler Mesh (@nymrel/crawler-mesh)
-- Repository: https://github.com/nymrel/nymrel-crawler-mesh
-- Description: Zero-telemetry, high-throughput web crawler and clean markdown extractor built for AI agents and LLMs.
-- Install: git clone https://github.com/nymrel/nymrel-crawler-mesh.git
-
-#### 5. Website Audit Plugin (@nymrel/website-audit-plugin)
-- Repository: https://github.com/nymrel/nymrel-plugin
-- Description: Nymrel universal plugin for ChatGPT, Codex, Claude, and MCP hosts.
-- Install: git clone https://github.com/nymrel/nymrel-plugin.git
-
-#### 6. Agent Beacon (@nymrel/agent-beacon)
+#### 1. Agent Beacon (agent-beacon)
 - Repository: https://github.com/nymrel/agent-beacon
-- Description: Zero-dependency liveness sentinel, heartbeat monitor, and dead-man switch watchdog mesh for AI coding fleets.
-- Install: git clone https://github.com/nymrel/agent-beacon.git
+- GitHub description (owner-supplied): Zero-dependency agent liveness sentinel, heartbeat monitor, and dead-man's switch watchdog mesh for AI coding fleets
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T08:07:23Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/agent-beacon.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 7. MCP Hub (@nymrel/mcp-hub)
+#### 2. BuilderWars (builderwars)
+- Repository: https://github.com/nymrel/builderwars
+- GitHub description (owner-supplied): Same model. Your harness. Re-run every match yourself. A contest between harnesses with one-command replay verification. No dependencies, MIT.
+- Primary language: Python
+- Default branch: main
+- Last source update observed: 2026-08-29T12:20:49Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/builderwars.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 3. Local Agent Forge (local-agent-forge)
+- Repository: https://github.com/nymrel/local-agent-forge
+- GitHub description (owner-supplied): Zero-cloud local GPU orchestrator, dynamic 85% model router, and MCP server for AI coding agents with token dollar savings ledger
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T08:44:49Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/local-agent-forge.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 4. Nymrel Agent (nymrel-agent)
+- Repository: https://github.com/nymrel/nymrel-agent
+- GitHub description (owner-supplied): Explainable multi-model routing with deterministic receipts and no prompt custody.
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T00:24:04Z
+- Latest GitHub release: v0.4.0 published 2026-08-28T22:57:34Z
+- Source checkout: git clone https://github.com/nymrel/nymrel-agent.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 5. Nymrel Crawler Mesh (nymrel-crawler-mesh)
+- Repository: https://github.com/nymrel/nymrel-crawler-mesh
+- GitHub description (owner-supplied): Zero-telemetry, high-throughput web crawler and clean markdown extractor built specifically for AI agents and LLMs
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T06:54:49Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/nymrel-crawler-mesh.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 6. Nymrel MCP Hub (nymrel-mcp-hub)
 - Repository: https://github.com/nymrel/nymrel-mcp-hub
-- Description: Unified Model Context Protocol server aggregating Nymrel toolchains for Claude, Cursor, Codex, and OpenAI agents.
-- Install: git clone https://github.com/nymrel/nymrel-mcp-hub.git
+- GitHub description (owner-supplied): No GitHub repository description was present when this snapshot was captured.
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T02:50:44Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/nymrel-mcp-hub.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 8. Swarm Protocol (@nymrel/swarm-protocol)
+#### 7. Nymrel Plugin (nymrel-plugin)
+- Repository: https://github.com/nymrel/nymrel-plugin
+- GitHub description (owner-supplied): Nymrel universal plugin for ChatGPT, Codex, Claude, and MCP hosts
+- Primary language: Python
+- Default branch: main
+- Last source update observed: 2026-08-30T01:11:41Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/nymrel-plugin.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 8. Nymrel Swarm Protocol (nymrel-swarm-protocol)
 - Repository: https://github.com/nymrel/nymrel-swarm-protocol
-- Description: Universal multi-agent swarm protocol, two-seat command studio contract, and file-based bus engine.
-- Install: git clone https://github.com/nymrel/nymrel-swarm-protocol.git
+- GitHub description (owner-supplied): Universal Multi-Agent Swarm Protocol, Two-Seat Command Studio Contract, and File-Based Bus Engine for AI coding teams
+- Primary language: Python
+- Default branch: main
+- Last source update observed: 2026-08-29T23:52:55Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/nymrel-swarm-protocol.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 9. Presence (presence-rail)
+#### 9. Nymrel Swarm Studio (nymrel-swarm-studio)
+- Repository: https://github.com/nymrel/nymrel-swarm-studio
+- GitHub description (owner-supplied): Visual Command Center and Action Surety Deck for Multi-Agent Coding Swarms (Google A2UI v0.8, Warm Paper UI, Merkle SHA-256 Logs)
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T06:42:52Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/nymrel-swarm-studio.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 10. Presence (presence)
 - Repository: https://github.com/nymrel/presence
-- Homepage: https://nymrel.com/presence
-- Description: An agent hits a step that needs a human. Presence pauses it, buzzes a phone, and resumes once the person has acted.
-- Install: git clone https://github.com/nymrel/presence.git
+- GitHub description (owner-supplied): An agent hits a step that needs a human. Presence pauses it, buzzes a phone, and resumes once the person has acted. Carries context and attention, never an answer. Zero deps, MIT.
+- Primary language: JavaScript
+- Default branch: main
+- Last source update observed: 2026-08-19T07:32:44Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/presence.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
 ### Commerce & Micropayments
 
-#### 10. OpenUCP (@nymrel/open-ucp)
-- Repository: https://github.com/nymrel/open-ucp
-- Description: Zero-dependency Universal Commerce Protocol (UCP) & Agentic Purchasing Engine with x402 micropayments.
-- Install: git clone https://github.com/nymrel/open-ucp.git
-
-#### 11. UCP Scanner (agentic-ucp-scanner)
+#### 11. Agentic UCP Scanner (agentic-ucp-scanner)
 - Repository: https://github.com/nymrel/agentic-ucp-scanner
-- Description: Zero-dependency CLI & audit engine to verify websites for AI Agent Commerce Readiness and JSON-LD trust.
-- Install: git clone https://github.com/nymrel/agentic-ucp-scanner.git
+- GitHub description (owner-supplied): Zero-dependency CLI and audit engine for AI Agent Commerce Readiness, UCP, Schema.org JSON-LD, and llms.txt
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-29T22:25:19Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/agentic-ucp-scanner.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 12. Headless Quote Layer (@nymrel/headless-quote)
+#### 12. Headless Quote Layer (headless-quote-layer)
 - Repository: https://github.com/nymrel/headless-quote-layer
-- Description: Zero-dependency visual quote calculator, dynamic range estimator, and lead capture engine.
-- Install: git clone https://github.com/nymrel/headless-quote-layer.git
+- GitHub description (owner-supplied): Zero-dependency embeddable visual quote calculator, dynamic range estimator, and lead capture widget with Warm Paper aesthetics
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-21T22:09:50Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/headless-quote-layer.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 13. Open UCP (open-ucp)
+- Repository: https://github.com/nymrel/open-ucp
+- GitHub description (owner-supplied): Universal Commerce Protocol (UCP) and AI Agent Micropayments Middleware for Next.js, Express, Fastify, and FastAPI
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T01:55:53Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/open-ucp.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
 ### Security & Sandboxing
 
-#### 13. Agent Sandstorm (@nymrel/agent-sandstorm)
-- Repository: https://github.com/nymrel/agent-sandstorm
-- Description: Zero-Trust Agent Execution Sandbox & Copy-on-Write Workspace Isolation Engine with instant rollback.
-- Install: git clone https://github.com/nymrel/agent-sandstorm.git
-
-#### 14. Agent Surety (agent-action-surety)
+#### 14. Agent Action Surety (agent-action-surety)
 - Repository: https://github.com/nymrel/agent-action-surety
-- Description: Deny-by-default execution safety envelope and cryptographic SHA-256 Merkle ledger for AI coding swarms.
-- Install: git clone https://github.com/nymrel/agent-action-surety.git
+- GitHub description (owner-supplied): Deny-by-default execution safety envelope and cryptographic SHA-256 Merkle ledger for AI coding swarms
+- Primary language: Python
+- Default branch: main
+- Last source update observed: 2026-08-29T21:54:25Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/agent-action-surety.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 15. Proof Ledger (@nymrel/proof-ledger)
-- Repository: https://github.com/nymrel/nymrel-proof-ledger
-- Description: Zero-dependency dual-language cryptographic attestation and proof-of-execution protocol library.
-- Install: git clone https://github.com/nymrel/nymrel-proof-ledger.git
-
-#### 16. PermitMesh (PermitMesh)
-- Repository: https://github.com/nymrel/PermitMesh
-- Homepage: https://nymrel.com
-- Description: A portable policy-decision profile for AI agents changing software. PDP, not PEP.
-- Install: git clone https://github.com/nymrel/PermitMesh.git
-
-#### 17. Agent Proofchain (agent-proofchain)
+#### 15. Agent Proofchain (agent-proofchain)
 - Repository: https://github.com/nymrel/agent-proofchain
-- Homepage: https://nymrel.com
-- Description: Provider-neutral admission decisions and tamper-evident action receipts for AI agents.
-- Install: git clone https://github.com/nymrel/agent-proofchain.git
+- GitHub description (owner-supplied): Provider-neutral admission decisions and tamper-evident action receipts for AI agents.
+- Primary language: Python
+- Default branch: main
+- Last source update observed: 2026-08-18T10:37:40Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/agent-proofchain.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 16. Agent Sandstorm (agent-sandstorm)
+- Repository: https://github.com/nymrel/agent-sandstorm
+- GitHub description (owner-supplied): Zero-Trust Agent Execution Sandbox with Copy-on-Write Snapshots, 1-Click Rollbacks, and Secret Exfiltration Proxy
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T07:33:58Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/agent-sandstorm.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 17. Nymrel Proof Ledger (nymrel-proof-ledger)
+- Repository: https://github.com/nymrel/nymrel-proof-ledger
+- GitHub description (owner-supplied): Zero-dependency cryptographic attestation and proof-of-execution protocol with RFC 6962 Merkle trees and SVG badges
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T04:15:48Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/nymrel-proof-ledger.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 18. PermitMesh (PermitMesh)
+- Repository: https://github.com/nymrel/PermitMesh
+- GitHub description (owner-supplied): A portable policy-decision profile for AI agents changing software.
+- Primary language: Python
+- Default branch: main
+- Last source update observed: 2026-08-24T21:25:37Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/PermitMesh.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
 ### UI & Machine Trust
 
-#### 18. A2UI Warm Paper (a2ui-warm-paper)
+#### 19. A2UI Warm Paper (a2ui-warm-paper)
 - Repository: https://github.com/nymrel/a2ui-warm-paper
-- Description: Google A2UI (Agent-to-UI) declarative JSON specification component system in Nymrel Warm Paper aesthetics.
-- Install: git clone https://github.com/nymrel/a2ui-warm-paper.git
+- GitHub description (owner-supplied): Google A2UI v0.8 declarative JSON component library rendered with Nymrel Warm Paper aesthetics
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-21T21:26:00Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/a2ui-warm-paper.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 19. Machine Trust (@nymrel/machine-trust)
-- Repository: https://github.com/nymrel/nymrel-machine-trust
-- Description: Dual-Audience Machine Trust & AI Search Discoverability Engine for modern web applications.
-- Install: git clone https://github.com/nymrel/nymrel-machine-trust.git
-
-#### 20. Trust Scorecard (@nymrel/trust-scorecard)
-- Repository: https://github.com/nymrel/nymrel-trust-scorecard
-- Description: AI readiness and machine trust scorecard web application in Nymrel Warm Paper design.
-- Install: git clone https://github.com/nymrel/nymrel-trust-scorecard.git
-
-#### 21. AI Visibility Scorecard (ai-visibility-scorecard)
+#### 20. AI Visibility Scorecard (ai-visibility-scorecard)
 - Repository: https://github.com/nymrel/ai-visibility-scorecard
-- Homepage: https://nymrel.com/tools/ai-visibility-scorecard
-- Description: Grade how findable your site is to ChatGPT, Claude, and Perplexity, with fixes ranked by impact.
-- Install: git clone https://github.com/nymrel/ai-visibility-scorecard.git
+- GitHub description (owner-supplied): Grade how findable your site is to ChatGPT, Claude, and Perplexity, with the fixes ranked by impact. Runs in the browser.
+- Primary language: JavaScript
+- Default branch: main
+- Last source update observed: 2026-08-21T16:54:30Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/ai-visibility-scorecard.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 22. ChatGPT Recommends (chatgpt-recommends)
+#### 21. ChatGPT Recommends (chatgpt-recommends)
 - Repository: https://github.com/nymrel/chatgpt-recommends
-- Homepage: https://nymrel.com/tools/chatgpt-recommends
-- Description: Check whether ChatGPT recommends your business: three buyer-intent prompts, paste the answers, get a scored verdict.
-- Install: git clone https://github.com/nymrel/chatgpt-recommends.git
+- GitHub description (owner-supplied): Check whether ChatGPT recommends your business. Run three buyer-intent prompts, paste the answers, get a scored verdict.
+- Primary language: JavaScript
+- Default branch: main
+- Last source update observed: 2026-08-18T10:38:51Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/chatgpt-recommends.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 23. JSON-LD Generator (json-ld-generator)
+#### 22. JSON-LD Generator (json-ld-generator)
 - Repository: https://github.com/nymrel/json-ld-generator
-- Homepage: https://nymrel.com/tools/json-ld-generator
-- Description: Generate schema.org JSON-LD for LocalBusiness, Product, FAQ and more, or check markup you already have.
-- Install: git clone https://github.com/nymrel/json-ld-generator.git
+- GitHub description (owner-supplied): Generate schema.org JSON-LD for LocalBusiness, Product, FAQ and more, or check markup you already have. Runs in the browser.
+- Primary language: JavaScript
+- Default branch: main
+- Last source update observed: 2026-08-18T10:38:18Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/json-ld-generator.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 24. llms.txt Generator (llms-txt-generator)
+#### 23. llms.txt Generator (llms-txt-generator)
 - Repository: https://github.com/nymrel/llms-txt-generator
-- Homepage: https://nymrel.com/tools/llms-txt-generator
-- Description: Build a publish-ready llms.txt — a short map of your site that AI assistants can read in one pass.
-- Install: git clone https://github.com/nymrel/llms-txt-generator.git
+- GitHub description (owner-supplied): Build a publish-ready llms.txt — a short map of your site that AI assistants can read in one pass. Runs in the browser.
+- Primary language: JavaScript
+- Default branch: main
+- Last source update observed: 2026-08-18T10:38:03Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/llms-txt-generator.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 24. Nymrel Machine Trust (nymrel-machine-trust)
+- Repository: https://github.com/nymrel/nymrel-machine-trust
+- GitHub description (owner-supplied): Dual-Audience Machine Trust and AI Search Engine for Schema.org JSON-LD, llms.txt, and zero DOM drift validation
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-30T04:42:31Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/nymrel-machine-trust.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 25. Nymrel Trust Scorecard (nymrel-trust-scorecard)
+- Repository: https://github.com/nymrel/nymrel-trust-scorecard
+- GitHub description (owner-supplied): Viral AI Readiness & Machine Trust Web Application (React 18 + Vite + TypeScript) in Nymrel Warm Paper design
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-21T21:26:16Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/nymrel-trust-scorecard.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
 ### Developer Tools
 
-#### 25. Noop Flags (noop-flags)
+#### 26. Noop Flags (noop-flags)
 - Repository: https://github.com/nymrel/noop-flags
-- Homepage: https://nymrel.com
-- Description: Find the CLI flags your program accepts and never reads. One file, no dependencies.
-- Install: git clone https://github.com/nymrel/noop-flags.git
+- GitHub description (owner-supplied): Find the CLI flags your program accepts and never reads. One file, no dependencies, MIT.
+- Primary language: Python
+- Default branch: main
+- Last source update observed: 2026-08-29T17:18:09Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/noop-flags.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-#### 26. Token Spend Dashboard (token-spend-dashboard)
-- Repository: https://github.com/nymrel/token-spend-dashboard
-- Homepage: https://nymrel.com/tools/token-spend-dashboard
-- Description: Paste an Anthropic or OpenAI usage export and get a spend dashboard by day and model. Nothing leaves your device.
-- Install: git clone https://github.com/nymrel/token-spend-dashboard.git
-
-#### 27. QR UTM Generator (qr-utm-generator)
-- Repository: https://github.com/nymrel/qr-utm-generator
-- Homepage: https://nymrel.com/tools/qr-utm-generator
-- Description: QR codes with UTM tracking built into the link, so you know which flyer brought them in.
-- Install: git clone https://github.com/nymrel/qr-utm-generator.git
-
-#### 28. Ecosystem Portal (@nymrel/portal)
+#### 27. Nymrel Ecosystem Portal (nymrel-ecosystem-portal)
 - Repository: https://github.com/nymrel/nymrel-ecosystem-portal
-- Description: This portal: the official open-source showcase, documentation hub, and interactive catalog for the Nymrel agent suite.
-- Install: git clone https://github.com/nymrel/nymrel-ecosystem-portal.git
+- GitHub description (owner-supplied): The official open-source showcase, documentation portal, and interactive hub for the Nymrel autonomous agent suite
+- Primary language: TypeScript
+- Default branch: main
+- Last source update observed: 2026-08-24T03:00:11Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/nymrel-ecosystem-portal.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
 
-## Machine Discoverability & AI Crawlers
-- OAI-SearchBot: Allowed
-- ClaudeBot: Allowed
-- GPTBot: Training disallow, Search allow
-- PerplexityBot: Allowed
-- Sitemap: https://nymrel.com/sitemap.xml
+#### 28. QR + UTM Generator (qr-utm-generator)
+- Repository: https://github.com/nymrel/qr-utm-generator
+- GitHub description (owner-supplied): QR codes with UTM tracking built into the link, so you know which flyer brought them in. Runs in the browser.
+- Primary language: JavaScript
+- Default branch: main
+- Last source update observed: 2026-08-18T10:38:33Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/qr-utm-generator.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+#### 29. Token Spend Dashboard (token-spend-dashboard)
+- Repository: https://github.com/nymrel/token-spend-dashboard
+- GitHub description (owner-supplied): Paste an Anthropic or OpenAI usage export and get a spend dashboard by day and model. Nothing leaves your device.
+- Primary language: JavaScript
+- Default branch: main
+- Last source update observed: 2026-08-18T10:38:42Z
+- Latest GitHub release: No latest GitHub release returned in the captured snapshot
+- Source checkout: git clone https://github.com/nymrel/token-spend-dashboard.git
+- Registry: not assessed
+- License: not assessed by this catalog; inspect the repository
+- Validation, adoption, and revenue: not assessed by this portal
+
+## Portal surfaces
+- Human catalog: https://nymrel.com/ecosystem
+- GitHub organization: https://github.com/nymrel

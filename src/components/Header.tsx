@@ -1,199 +1,114 @@
-import React, { useEffect, useRef } from 'react';
-import { Search, Github, Terminal, Sparkles, X } from 'lucide-react';
+import { useEffect, useId, useRef } from 'react';
+import { GitBranch, Search, Sparkles, Terminal, X } from 'lucide-react';
 import { ECOSYSTEM_METRICS } from '../data/ecosystem';
 
 interface HeaderProps {
   searchQuery: string;
   onSearchChange: (query: string) => void;
   onOpenQuickstart: () => void;
-  onOpenPlayground: () => void;
+  onOpenEvidence: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({
+export const Header = ({
   searchQuery,
   onSearchChange,
   onOpenQuickstart,
-  onOpenPlayground
-}) => {
+  onOpenEvidence,
+}: HeaderProps) => {
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchId = useId();
 
-  // Keyboard shortcut: press '/' to focus search
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === '/' && document.activeElement !== searchInputRef.current) {
-        e.preventDefault();
+    const focusSearch = (event: KeyboardEvent) => {
+      const target = event.target;
+      const isEditing =
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          target.matches('input, textarea, select, [role="textbox"]'));
+
+      if (event.key === '/' && !isEditing) {
+        event.preventDefault();
         searchInputRef.current?.focus();
       }
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+
+    window.addEventListener('keydown', focusSearch);
+    return () => window.removeEventListener('keydown', focusSearch);
   }, []);
 
   return (
-    <header style={{
-      position: 'sticky',
-      top: 0,
-      zIndex: 40,
-      backgroundColor: 'rgba(250, 248, 242, 0.94)',
-      backdropFilter: 'blur(12px)',
-      borderBottom: '1px solid var(--nym-border-default)',
-      padding: '14px 0'
-    }}>
-      <div className="nym-container" style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: '16px',
-        flexWrap: 'wrap'
-      }}>
-        {/* Brand Lockup */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-          <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
-            <div style={{
-              width: '36px',
-              height: '36px',
-              borderRadius: '10px',
-              backgroundColor: 'var(--nym-cedar)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: 'var(--nym-shadow-sm)',
-              border: '1px solid rgba(42, 51, 46, 0.2)'
-            }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M4 18L12 6L20 18" stroke="#FAF8F2" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="12" cy="14" r="2.2" fill="#A8541F" />
-              </svg>
-            </div>
-            <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <span style={{
-                  fontFamily: 'var(--nym-font-serif)',
-                  fontSize: '20px',
-                  fontWeight: 700,
-                  color: 'var(--nym-cedar)',
-                  letterSpacing: '-0.03em'
-                }}>
-                  Nymrel
-                </span>
-                <span style={{
-                  fontSize: '11px',
-                  fontWeight: 600,
-                  padding: '2px 7px',
-                  borderRadius: '4px',
-                  backgroundColor: 'var(--nym-sage)',
-                  color: 'var(--nym-cedar-dark)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.04em'
-                }}>
-                  Ecosystem
-                </span>
-              </div>
-              <span style={{ fontSize: '11px', color: 'var(--nym-text-muted)', display: 'block', marginTop: '-2px' }}>
-                Open-Source Agent Suite
-              </span>
-            </div>
-          </a>
+    <header className="site-header">
+      <div className="nym-container header-layout">
+        <a className="brand-lockup" href="#top" aria-label="Nymrel ecosystem home">
+          <span className="brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 18 12 6l8 12"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle cx="12" cy="14" r="2.2" fill="#C76532" />
+            </svg>
+          </span>
+          <span>
+            <span className="brand-row">
+              <span className="brand-name">Nymrel</span>
+              <span className="brand-kicker">Ecosystem</span>
+            </span>
+            <span className="brand-subtitle">Public source catalog</span>
+          </span>
+        </a>
+
+        <div className="search-shell">
+          <label className="sr-only" htmlFor={searchId}>
+            Search the Nymrel public repository snapshot
+          </label>
+          <Search size={17} aria-hidden="true" />
+          <input
+            ref={searchInputRef}
+            id={searchId}
+            type="search"
+            value={searchQuery}
+            onChange={(event) => onSearchChange(event.target.value)}
+            placeholder={'Search ' + ECOSYSTEM_METRICS.totalRepos + ' public repositories'}
+            aria-keyshortcuts="/"
+          />
+          {searchQuery.length > 0 ? (
+            <button
+              className="icon-button"
+              type="button"
+              onClick={() => onSearchChange('')}
+              aria-label="Clear repository search"
+            >
+              <X size={15} aria-hidden="true" />
+            </button>
+          ) : (
+            <kbd aria-hidden="true">/</kbd>
+          )}
         </div>
 
-        {/* Global Search Bar */}
-        <div style={{
-          flex: '1 1 280px',
-          maxWidth: '440px',
-          position: 'relative'
-        }}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            backgroundColor: 'var(--nym-bg-elevated)',
-            border: '1px solid var(--nym-border-default)',
-            borderRadius: 'var(--nym-radius-md)',
-            padding: '7px 12px',
-            boxShadow: 'var(--nym-shadow-sm)',
-            transition: 'border-color 0.15s ease'
-          }}>
-            <Search size={16} color="var(--nym-text-muted)" style={{ marginRight: '8px', flexShrink: 0 }} />
-            <input
-              ref={searchInputRef}
-              type="text"
-              placeholder="Search 10+ repos, tags, packages (Press '/' to focus)..."
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              style={{
-                width: '100%',
-                border: 'none',
-                outline: 'none',
-                backgroundColor: 'transparent',
-                fontSize: '13px',
-                color: 'var(--nym-text-primary)',
-                fontFamily: 'var(--nym-font-sans)'
-              }}
-            />
-            {searchQuery && (
-              <button
-                onClick={() => onSearchChange('')}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                  color: 'var(--nym-text-muted)',
-                  padding: '2px',
-                  display: 'flex',
-                  alignItems: 'center'
-                }}
-                aria-label="Clear search"
-              >
-                <X size={14} />
-              </button>
-            )}
-            <kbd style={{
-              fontSize: '11px',
-              fontFamily: 'var(--nym-font-mono)',
-              padding: '2px 5px',
-              backgroundColor: 'var(--nym-bg-subtle)',
-              border: '1px solid var(--nym-border-default)',
-              borderRadius: '4px',
-              color: 'var(--nym-text-muted)',
-              marginLeft: '6px',
-              userSelect: 'none'
-            }}>
-              /
-            </kbd>
-          </div>
-        </div>
-
-        {/* Quick Actions & GitHub */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <button
-            onClick={onOpenPlayground}
-            className="nym-btn-secondary"
-            style={{ fontSize: '13px', padding: '8px 14px' }}
-          >
-            <Sparkles size={15} color="var(--nym-terracotta)" />
-            <span>Playground</span>
+        <nav className="header-actions" aria-label="Ecosystem actions">
+          <button className="nym-btn-secondary compact-action" type="button" onClick={onOpenEvidence}>
+            <Sparkles size={15} aria-hidden="true" />
+            <span>Evidence</span>
           </button>
-
-          <button
-            onClick={onOpenQuickstart}
-            className="nym-btn-primary"
-            style={{ fontSize: '13px', padding: '8px 14px' }}
-          >
-            <Terminal size={15} />
-            <span>Quickstart</span>
+          <button className="nym-btn-primary compact-action" type="button" onClick={onOpenQuickstart}>
+            <Terminal size={15} aria-hidden="true" />
+            <span>Source checkout</span>
           </button>
-
           <a
+            className="nym-btn-ghost github-action"
             href="https://github.com/nymrel"
             target="_blank"
-            rel="noopener noreferrer"
-            className="nym-btn-ghost"
-            style={{ padding: '8px 10px' }}
-            aria-label="Nymrel GitHub Organization"
+            rel="noreferrer"
+            aria-label={'View all ' + ECOSYSTEM_METRICS.totalRepos + ' public Nymrel repositories on GitHub'}
           >
-            <Github size={18} />
-            <span style={{ fontSize: '12px', fontWeight: 600 }}>{ECOSYSTEM_METRICS.totalRepos}</span>
+            <GitBranch size={18} aria-hidden="true" />
+            <span>{ECOSYSTEM_METRICS.totalRepos}</span>
           </a>
-        </div>
+        </nav>
       </div>
     </header>
   );

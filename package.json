@@ -1,7 +1,8 @@
 {
   "name": "@nymrel/portal",
   "version": "1.0.0",
-  "description": "Showcase, interactive documentation hub, and developer portal for the Nymrel open-source autonomous agent ecosystem.",
+  "description": "Static source catalog and interactive reference for the Nymrel open-source ecosystem.",
+  "private": true,
   "type": "module",
   "license": "MIT",
   "author": "Nymrel <contact@nymrel.com>",
@@ -23,29 +24,37 @@
     "jalenbuilds"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build && npm run check:artifact",
+    "check:artifact": "node scripts/check-portal.mjs",
+    "lint": "oxlint --type-aware src test scripts/check-portal.mjs vite.config.ts --deny-warnings --report-unused-disable-directives",
     "sync-llms": "node --experimental-strip-types scripts/generate-llms.mjs",
-    "test": "node --experimental-strip-types --test test/**/*.test.js",
+    "test": "node --test test/**/*.test.js",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build && npm test"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.475.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "lucide-react": "1.37.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
-    "@types/node": "^22.10.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.4",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.1"
+    "@types/node": "22.20.1",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "@vitejs/plugin-react": "6.1.1",
+    "oxlint": "1.80.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "typescript": "7.0.2",
+    "vite": "8.2.2"
   },
-  "publishConfig": {
-    "access": "public"
-  }
+  "engines": {
+    "node": ">=22.22.2 <27",
+    "npm": ">=12.0.2 <13"
+  },
+  "packageManager": "npm@12.0.2",
+  "sideEffects": [
+    "**/*.css"
+  ]
 }
