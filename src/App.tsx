@@ -1,56 +1,50 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { DualAudienceFooter } from './components/DualAudienceFooter';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
-import { ToolGrid } from './components/ToolGrid';
 import { InteractivePlayground } from './components/InteractivePlayground';
 import { QuickstartDrawer } from './components/QuickstartDrawer';
-import { DualAudienceFooter } from './components/DualAudienceFooter';
+import { ToolGrid } from './components/ToolGrid';
 import './styles/theme.css';
 
-export const App: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [isQuickstartOpen, setIsQuickstartOpen] = useState<boolean>(false);
+const scrollToSection = (id: string) => {
+  const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ? 'auto'
+    : 'smooth';
+  document.getElementById(id)?.scrollIntoView({ behavior, block: 'start' });
+};
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+export const App = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isQuickstartOpen, setIsQuickstartOpen] = useState(false);
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--nym-bg-base)' }}>
-      {/* Top Sticky Header */}
+    <div id="top" className="app-shell">
+      <a className="skip-link" href="#main-content">
+        Skip to catalog
+      </a>
       <Header
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         onOpenQuickstart={() => setIsQuickstartOpen(true)}
-        onOpenPlayground={() => scrollToSection('playground')}
+        onOpenEvidence={() => scrollToSection('evidence-explorer')}
       />
-
-      {/* Main Content Area */}
-      <main style={{ flexGrow: 1 }}>
+      <main id="main-content">
         <HeroSection
           onExploreClick={() => scrollToSection('repositories')}
-          onPlaygroundClick={() => scrollToSection('playground')}
+          onEvidenceClick={() => scrollToSection('evidence-explorer')}
           onQuickstartClick={() => setIsQuickstartOpen(true)}
         />
-
         <ToolGrid
           searchQuery={searchQuery}
           onClearSearch={() => setSearchQuery('')}
         />
-
         <InteractivePlayground />
       </main>
-
-      {/* 1-Click Quickstart Drawer */}
       <QuickstartDrawer
         isOpen={isQuickstartOpen}
         onClose={() => setIsQuickstartOpen(false)}
       />
-
-      {/* Dual Audience Machine Trust & Human Footer */}
       <DualAudienceFooter />
     </div>
   );

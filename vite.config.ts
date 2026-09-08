@@ -6,10 +6,21 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    host: true
+    host: '127.0.0.1',
+    strictPort: true,
+    cors: false,
+    allowedHosts: ['localhost', '127.0.0.1']
   },
   preview: {
     port: 4173,
-    host: true
+    host: '127.0.0.1',
+    strictPort: true,
+    cors: false,
+    allowedHosts: ['localhost', '127.0.0.1']
+  },
+  build: {
+    emptyOutDir: true,
+    sourcemap: false,
+    reportCompressedSize: true
   }
 });
