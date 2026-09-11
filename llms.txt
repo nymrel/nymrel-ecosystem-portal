@@ -1,5 +1,5 @@
-# Nymrel Open-Source Ecosystem Portal
-> The Open Operating Layer for Autonomous AI Agents, Swarms & Modern Web
+# Nymrel Ecosystem Source Catalog
+> A conservative catalog of Nymrel ecosystem references and release evidence.
 
 ## Entity & Governance
 - Primary Umbrella: Nymrel (https://nymrel.com)
@@ -9,67 +9,72 @@
 - License: MIT License (100% Free & Open Source)
 - Aesthetics: Nymrel Warm Paper (#FAF8F2, #F4F0E6, #2A332E, #A8541F, #E2DDD2)
 
+## Release evidence boundary
+- Registry check: all ten listed npm package names returned 404 on 2026-08-21.
+- Status: npm packages are not published in this evidence snapshot. No install commands, package links, CLI instructions, CDN snippets, integration examples, adoption, customer, or revenue claims are provided.
+- Evidence states modeled by this catalog: source available, locally validated, registry published, install proven, externally adopted, and revenue proven. No state beyond the registry check is asserted for the entries below.
+
 ## 10 Flagship Open-Source Repositories
 
 ### 1. Swarm Studio (@nymrel/swarm-studio)
 - Category: Agents & Swarms
 - Repository: https://github.com/nymrel/nymrel-swarm-studio
 - Description: Visual command deck for multi-agent coding swarms with Warm Paper aesthetics, Google A2UI v0.8 streaming components, real-time agent topology, and Action Surety Merkle logs.
-- Install: npm install @nymrel/swarm-studio
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ### 2. OpenUCP (@nymrel/open-ucp)
 - Category: Commerce & Micropayments
 - Repository: https://github.com/nymrel/open-ucp
 - Description: Zero-dependency Universal Commerce Protocol (UCP) & Agentic Purchasing Engine for TypeScript and Node.js with x402 HTTP micropayments and AP2 negotiation.
-- Install: npm install @nymrel/open-ucp
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ### 3. Agent Sandstorm (@nymrel/agent-sandstorm)
 - Category: Security & Sandboxing
 - Repository: https://github.com/nymrel/agent-sandstorm
 - Description: Zero-Trust Agent Execution Sandbox & Copy-on-Write Workspace Isolation Engine with automated rollback, spend limiters, and secret exfiltration prevention.
-- Install: npm install @nymrel/agent-sandstorm
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ### 4. UCP Scanner (agentic-ucp-scanner)
 - Category: Commerce & Micropayments
 - Repository: https://github.com/nymrel/agentic-ucp-scanner
 - Description: Zero-dependency CLI & library to audit websites for AI Agent Commerce Readiness, UCP, JSON-LD Machine Trust, and autonomous purchasing capabilities.
-- Install: npm install agentic-ucp-scanner
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ### 5. A2UI Warm Paper (a2ui-warm-paper)
 - Category: UI & Machine Trust
 - Repository: https://github.com/nymrel/a2ui-warm-paper
 - Description: Google A2UI (Agent-to-UI) declarative JSON specification component system with Nymrel's signature Warm Paper design aesthetic for human-in-the-loop agent workflows.
-- Install: npm install a2ui-warm-paper
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ### 6. Agent Surety (@nymrel/agent-surety)
 - Category: Security & Sandboxing
 - Repository: https://github.com/nymrel/agent-action-surety
 - Description: Zero-dependency execution firewall, path sandbox, command interceptor, and cryptographic audit ledger for AI coding agents and autonomous tool-calling swarms.
-- Install: npm install @nymrel/agent-surety
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ### 7. Machine Trust (@nymrel/machine-trust)
 - Category: UI & Machine Trust
 - Repository: https://github.com/nymrel/nymrel-machine-trust
 - Description: Dual-Audience Machine Trust & AI Search Discoverability Engine generating Schema.org JSON-LD entity graphs, valid robots.txt, and /llms.txt for autonomous agent discovery.
-- Install: npm install @nymrel/machine-trust
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ### 8. Proof Ledger (@nymrel/proof-ledger)
 - Category: Security & Sandboxing
 - Repository: https://github.com/nymrel/nymrel-proof-ledger
 - Description: Zero-dependency dual-language cryptographic attestation and proof-of-execution protocol library with RFC-6962 Merkle trees and Ed25519 signatures.
-- Install: npm install @nymrel/proof-ledger
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ### 9. Local Forge (@nymrel/local-forge)
 - Category: Agents & Swarms
 - Repository: https://github.com/nymrel/local-agent-forge
 - Description: Zero-cloud local GPU orchestrator, dynamic model router (Luna/Terra/Sol), and MCP server for agentic workflows with real-time token savings tracking.
-- Install: npm install @nymrel/local-forge
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ### 10. Headless Quote Layer (@nymrel/headless-quote)
 - Category: Commerce & Micropayments
 - Repository: https://github.com/nymrel/headless-quote-layer
 - Description: Zero-dependency embeddable visual quote calculator, dynamic range estimator, and lead capture engine with Nymrel Warm Paper aesthetics.
-- Install: npm install @nymrel/headless-quote
+- npm release status: not published (checked 2026-08-21); no install command or package link is provided.
 
 ## Machine Discoverability & AI Crawlers
 - OAI-SearchBot: Allowed

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, Github, ExternalLink, Copy, Check, Layers, Box, CheckCircle2 } from 'lucide-react';
+import React from 'react';
+import { X, Github, ExternalLink, Layers, CheckCircle2 } from 'lucide-react';
 import { EcosystemRepo } from '../data/ecosystem';
 
 interface ToolDetailModalProps {
@@ -8,15 +8,7 @@ interface ToolDetailModalProps {
 }
 
 export const ToolDetailModal: React.FC<ToolDetailModalProps> = ({ repo, onClose }) => {
-  const [copiedSnippet, setCopiedSnippet] = useState(false);
-
   if (!repo) return null;
-
-  const handleCopy = (text: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedSnippet(true);
-    setTimeout(() => setCopiedSnippet(false), 2000);
-  };
 
   return (
     <div style={{
@@ -72,7 +64,7 @@ export const ToolDetailModal: React.FC<ToolDetailModalProps> = ({ repo, onClose 
         <div style={{ marginBottom: '24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', flexWrap: 'wrap' }}>
             <span className="nym-badge nym-badge-terracotta">{repo.category}</span>
-            <span className="nym-badge nym-badge-cedar">{repo.version}</span>
+            <span className="nym-badge nym-badge-cedar">npm {repo.release.registry === 'published' ? 'published' : 'not published'}</span>
             <span className="nym-badge nym-badge-neutral">{repo.license} License</span>
             {repo.zeroDependency && (
               <span className="nym-badge nym-badge-amber">Zero-Dependency</span>
@@ -102,42 +94,12 @@ export const ToolDetailModal: React.FC<ToolDetailModalProps> = ({ repo, onClose 
           {repo.fullDescription}
         </p>
 
-        {/* Installation Terminal */}
-        <div style={{ marginBottom: '24px' }}>
-          <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--nym-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '8px' }}>
-            Installation &amp; Integration
-          </div>
-          <div className="nym-terminal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <code>{repo.installSnippet}</code>
-            <button
-              onClick={() => handleCopy(repo.installSnippet)}
-              style={{
-                background: 'rgba(255,255,255,0.1)',
-                border: 'none',
-                color: '#FAF8F2',
-                cursor: 'pointer',
-                padding: '4px 10px',
-                borderRadius: '4px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px',
-                fontSize: '12px'
-              }}
-            >
-              {copiedSnippet ? <Check size={14} color="#34D399" /> : <Copy size={14} />}
-              <span>{copiedSnippet ? 'Copied' : 'Copy'}</span>
-            </button>
-          </div>
-          {repo.cliSnippet && (
-            <div style={{ marginTop: '8px' }}>
-              <div style={{ fontSize: '11px', color: 'var(--nym-text-muted)', marginBottom: '4px' }}>CLI / Quick execution:</div>
-              <div className="nym-terminal" style={{ padding: '10px 14px', fontSize: '12px' }}>
-                <code>{repo.cliSnippet}</code>
-              </div>
-            </div>
-          )}
+        <div style={{ marginBottom: '24px', padding: '16px', backgroundColor: 'var(--nym-bg-surface)', borderRadius: 'var(--nym-radius-md)', border: '1px solid var(--nym-border-default)' }}>
+          <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--nym-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '8px' }}>Release evidence</div>
+          <p style={{ fontSize: '13px', lineHeight: 1.5, color: 'var(--nym-text-secondary)' }}>
+            npm registry status: {repo.release.registry === 'published' ? 'published' : 'not published'} (checked {repo.release.registryCheckedAt}). No install, CLI, CDN, integration, adoption, or revenue proof is shown for this entry.
+          </p>
         </div>
-
         {/* Key Features Grid */}
         <div style={{ marginBottom: '24px' }}>
           <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--nym-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '10px' }}>
@@ -182,19 +144,6 @@ export const ToolDetailModal: React.FC<ToolDetailModalProps> = ({ repo, onClose 
 
         {/* Footer Actions */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '12px', flexWrap: 'wrap' }}>
-          {repo.npmUrl && (
-            <a
-              href={repo.npmUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nym-btn-secondary"
-              style={{ fontSize: '13px' }}
-            >
-              <Box size={15} />
-              <span>npm Package</span>
-              <ExternalLink size={13} color="var(--nym-text-muted)" />
-            </a>
-          )}
           <a
             href={repo.githubUrl}
             target="_blank"

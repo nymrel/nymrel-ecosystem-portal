@@ -13,10 +13,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onQuickstartClick
 }) => {
   const [copied, setCopied] = useState(false);
-  const installCmd = 'npm install @nymrel/open-ucp @nymrel/agent-surety @nymrel/proof-ledger';
+  const registryNote = 'npm releases are not published (checked 2026-08-21)';
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(installCmd);
+    navigator.clipboard.writeText(registryNote);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -39,11 +39,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         }}>
           <span className="nym-badge nym-badge-terracotta">
             <Sparkles size={12} />
-            <span>Nymrel Open-Source Suite 2026</span>
+            <span>Nymrel source catalog</span>
           </span>
           <span className="nym-badge nym-badge-cedar">
             <Shield size={12} />
-            <span>100% Zero-Dependency Core</span>
+            <span>npm status is evidence-gated</span>
           </span>
           <span className="nym-badge nym-badge-neutral">
             <Cpu size={12} />
@@ -55,27 +55,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <h1 style={{
           fontSize: 'clamp(32px, 5vw, 54px)',
           lineHeight: 1.12,
-          fontWeight: 700,
-          color: 'var(--nym-cedar)',
-          maxWidth: '920px',
-          marginBottom: '18px'
-        }}>
-          The Open Operating Layer for Autonomous AI Agents &amp; Modern Web
-        </h1>
-
-        {/* Hero Subtitle */}
-        <p style={{
-          fontSize: 'clamp(16px, 2vw, 19px)',
-          lineHeight: 1.55,
           color: 'var(--nym-text-secondary)',
           maxWidth: '820px',
           marginBottom: '32px'
         }}>
-          A complete ecosystem of 10+ open-source TypeScript and Python engines powering multi-agent 
+          This portal records ten ecosystem entries and their release evidence. Each listed npm package was unavailable in the registry check on 2026-08-21, so this catalog does not provide package install, CLI, CDN, or usage instructions.
+          {/*
           swarm orchestration, Universal Commerce Protocol (UCP) micropayments, execution firewalls, 
           A2UI generative interfaces, and cryptographic proof ledgers—built with signature 
           <strong style={{ color: 'var(--nym-cedar)', fontWeight: 600 }}> Nymrel Warm Paper aesthetics</strong>.
-        </p>
+          */}
+        </h1>
 
         {/* CLI Command Box & CTAs */}
         <div style={{
@@ -105,7 +95,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               whiteSpace: 'nowrap',
               paddingRight: '12px'
             }}>
-              {installCmd}
+              {registryNote}
             </code>
             <button
               onClick={handleCopy}
@@ -116,7 +106,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 padding: '6px 12px',
                 fontSize: '12px'
               }}
-              title="Copy to clipboard"
+              title="Copy registry status"
             >
               {copied ? (
                 <>
@@ -126,7 +116,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               ) : (
                 <>
                   <Copy size={14} />
-                  <span>Copy</span>
+                  <span>Copy status</span>
                 </>
               )}
             </button>
@@ -138,7 +128,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="nym-btn-primary"
             style={{ padding: '12px 24px' }}
           >
-            <span>Explore 10 Repositories</span>
+            <span>Explore 10 catalog entries</span>
             <ArrowDown size={15} />
           </button>
 
@@ -157,7 +147,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             style={{ padding: '12px 20px' }}
           >
             <Terminal size={15} />
-            <span>Quickstart</span>
+            <span>Release status</span>
           </button>
         </div>
 
@@ -174,25 +164,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         }}>
           <div>
             <div style={{ fontSize: '24px', fontWeight: 700, color: 'var(--nym-cedar)', fontFamily: 'var(--nym-font-serif)' }}>
-              10 Repos
+              10 Entries
             </div>
             <div style={{ fontSize: '12px', color: 'var(--nym-text-muted)', fontWeight: 500 }}>
-              Autonomous Agent Suite
+              Source references
             </div>
           </div>
 
           <div>
             <div style={{ fontSize: '24px', fontWeight: 700, color: 'var(--nym-terracotta)', fontFamily: 'var(--nym-font-serif)' }}>
-              0 Deps Core
+              npm releases
             </div>
             <div style={{ fontSize: '12px', color: 'var(--nym-text-muted)', fontWeight: 500 }}>
-              Zero Supply-Chain Bloat
+              Not published in the checked registry
             </div>
           </div>
 
           <div>
             <div style={{ fontSize: '24px', fontWeight: 700, color: 'var(--nym-cedar)', fontFamily: 'var(--nym-font-serif)' }}>
-              Warm Paper
+              No install proof
             </div>
             <div style={{ fontSize: '12px', color: 'var(--nym-text-muted)', fontWeight: 500 }}>
               #FAF8F2 · #2A332E · #A8541F
@@ -201,10 +191,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           <div>
             <div style={{ fontSize: '24px', fontWeight: 700, color: 'var(--nym-cedar)', fontFamily: 'var(--nym-font-serif)' }}>
-              Dual Audience
+              Evidence boundaries
             </div>
             <div style={{ fontSize: '12px', color: 'var(--nym-text-muted)', fontWeight: 500 }}>
-              Human UX + AI Machine Trust
+              No adoption or revenue claims
             </div>
           </div>
         </div>

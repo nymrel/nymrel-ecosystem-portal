@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { Search, Github, Terminal, Sparkles, X } from 'lucide-react';
-import { ECOSYSTEM_METRICS } from '../data/ecosystem';
 
 interface HeaderProps {
   searchQuery: string;
@@ -116,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({
             <input
               ref={searchInputRef}
               type="text"
-              placeholder="Search 10+ repos, tags, packages (Press '/' to focus)..."
+              placeholder="Search catalog entries, tags, packages (Press '/' to focus)..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               style={{
@@ -179,7 +178,7 @@ export const Header: React.FC<HeaderProps> = ({
             style={{ fontSize: '13px', padding: '8px 14px' }}
           >
             <Terminal size={15} />
-            <span>Quickstart</span>
+            <span>Release status</span>
           </button>
 
           <a
@@ -191,7 +190,7 @@ export const Header: React.FC<HeaderProps> = ({
             aria-label="Nymrel GitHub Organization"
           >
             <Github size={18} />
-            <span style={{ fontSize: '12px', fontWeight: 600 }}>{ECOSYSTEM_METRICS.starsTotal.toLocaleString()}+</span>
+            <span style={{ fontSize: '12px', fontWeight: 600 }}>Nymrel</span>
           </a>
         </div>
       </div>

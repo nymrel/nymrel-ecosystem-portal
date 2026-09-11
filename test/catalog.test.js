@@ -49,8 +49,7 @@ describe('Nymrel Ecosystem Catalog Integrity Tests', () => {
       assert.ok(CATEGORIES.includes(repo.category), `Repo ${repo.id} has invalid category ${repo.category}`);
       assert.ok(repo.githubUrl.startsWith('https://github.com/nymrel/'), `Repo ${repo.id} invalid GitHub URL`);
       assert.strictEqual(repo.license, 'MIT', `Repo ${repo.id} must have MIT license`);
-      assert.ok(repo.version === '1.0.0', `Repo ${repo.id} version must be 1.0.0`);
-      assert.ok(repo.installSnippet && repo.installSnippet.length > 0, `Repo ${repo.id} missing installSnippet`);
+      assert.ok(repo.release, `Repo ${repo.id} missing release evidence`);
       assert.ok(Array.isArray(repo.features) && repo.features.length >= 3, `Repo ${repo.id} must have >= 3 features`);
       assert.ok(Array.isArray(repo.badges) && repo.badges.length >= 3, `Repo ${repo.id} must have >= 3 badges`);
       assert.ok(Array.isArray(repo.tags) && repo.tags.length >= 3, `Repo ${repo.id} must have >= 3 tags`);
@@ -61,8 +60,26 @@ describe('Nymrel Ecosystem Catalog Integrity Tests', () => {
 
   it('should verify ecosystem metrics structure and entity attribution', () => {
     assert.strictEqual(ECOSYSTEM_METRICS.totalRepos, 10);
-    assert.strictEqual(ECOSYSTEM_METRICS.zeroDependencyCount, 10);
-    assert.strictEqual(ECOSYSTEM_METRICS.mitLicensed, 10);
     assert.strictEqual(ECOSYSTEM_METRICS.primaryEntities, 'Nymrel -> JalenBuilds LLC');
+  });
+
+  it('does not expose unpublished packages as installable', () => {
+    ECOSYSTEM_REPOSITORIES.forEach(repo => {
+      assert.strictEqual(repo.release.registry, 'unpublished', `${repo.id} must remain unpublished until registry proof exists`);
+      assert.deepStrictEqual(repo.release.verifiedStates, [], `${repo.id} must not claim unverified release evidence`);
+      assert.strictEqual(repo.npmUrl, undefined, `${repo.id} must not expose an npm package link`);
+      assert.strictEqual('installSnippet' in repo, false, `${repo.id} must not expose an install command`);
+      assert.strictEqual('cliSnippet' in repo, false, `${repo.id} must not expose a CLI command`);
+    });
+  });
+
+  it('does not describe Headless Quote Layer as CDN-deliverable', () => {
+    const headlessQuote = ECOSYSTEM_REPOSITORIES.find(repo => repo.id === 'headless-quote-layer');
+    assert.ok(headlessQuote, 'Headless Quote Layer must remain in the catalog');
+    assert.doesNotMatch(
+      [...headlessQuote.features, headlessQuote.architectureOverview].join(' '),
+      /\b(?:cdn|unpkg|script)\b/i,
+      'An unpublished package must not imply CDN delivery'
+    );
   });
 });

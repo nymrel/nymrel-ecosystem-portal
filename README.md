@@ -13,7 +13,11 @@
 
 ## 🏛️ Ecosystem Overview
 
-The **Nymrel Ecosystem Portal** is the official showcase, developer hub, and interactive playground for the 10+ open-source engines powering the Nymrel autonomous agent stack.
+The **Nymrel Ecosystem Portal** is a source catalog and interactive reference for ten Nymrel ecosystem entries. It is not a package registry or an installation guide for those entries.
+
+## Release evidence boundary
+
+On 2026-08-21, each of the ten package names listed in this catalog returned 404 from the npm registry. The portal therefore labels every entry `npm package not published` and deliberately omits package install commands, npm package links, CLI/CDN instructions, and integration examples. The catalog distinguishes typed evidence states—source available, locally validated, registry published, install proven, externally adopted, and revenue proven—but does not assert any state beyond this registry result for the listed entries.
 
 Every engine in the Nymrel suite is built upon four foundational pillars:
 1. **Zero-Dependency Supply Chain Safety**: All foundational algorithms (RFC-6962 Merkle trees, AST shell firewalls, x402 micropayments, Schema.org parsers) have zero external runtime dependencies.

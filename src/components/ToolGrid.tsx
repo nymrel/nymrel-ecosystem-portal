@@ -67,7 +67,7 @@ export const ToolGrid: React.FC<ToolGridProps> = ({ searchQuery, onClearSearch }
 
   const handleCopyInstall = (repo: EcosystemRepo, e: React.MouseEvent) => {
     e.stopPropagation();
-    navigator.clipboard.writeText(repo.installSnippet);
+    navigator.clipboard.writeText(`${repo.packageName}: npm package not published; no install command is available.`);
     setCopiedId(repo.id);
     setTimeout(() => setCopiedId(null), 2000);
   };
@@ -257,7 +257,7 @@ export const ToolGrid: React.FC<ToolGridProps> = ({ searchQuery, onClearSearch }
                       borderRadius: '4px',
                       border: '1px solid var(--nym-border-default)'
                     }}>
-                      {repo.version}
+                      npm {repo.release.registry === 'published' ? 'published' : 'not published'}
                     </span>
                   </div>
                 </div>
@@ -335,7 +335,7 @@ export const ToolGrid: React.FC<ToolGridProps> = ({ searchQuery, onClearSearch }
                     marginBottom: '16px',
                     cursor: 'copy'
                   }}
-                  title="Click to copy install command"
+                  title="Click to copy registry status"
                 >
                   <code style={{
                     fontSize: '12px',
@@ -345,7 +345,7 @@ export const ToolGrid: React.FC<ToolGridProps> = ({ searchQuery, onClearSearch }
                     textOverflow: 'ellipsis',
                     whiteSpace: 'nowrap'
                   }}>
-                    {repo.installSnippet}
+                    {repo.release.registry === 'published' ? 'Published release available' : 'npm package not published'}
                   </code>
                   <button
                     style={{
@@ -357,7 +357,7 @@ export const ToolGrid: React.FC<ToolGridProps> = ({ searchQuery, onClearSearch }
                       alignItems: 'center',
                       padding: '2px'
                     }}
-                    aria-label="Copy install snippet"
+                    aria-label="Copy registry status"
                   >
                     {copiedId === repo.id ? <Check size={14} color="#059669" /> : <Copy size={14} />}
                   </button>

@@ -9,7 +9,7 @@ interface QuickstartDrawerProps {
 
 export const QuickstartDrawer: React.FC<QuickstartDrawerProps> = ({ isOpen, onClose }) => {
   const [selectedRepoId, setSelectedRepoId] = useState<string>('open-ucp');
-  const [activeTab, setActiveTab] = useState<'npm' | 'pnpm' | 'bun' | 'pip' | 'git' | 'cdn'>('npm');
+  const [activeTab, setActiveTab] = useState<'status'>('status');
   const [copied, setCopied] = useState<boolean>(false);
 
   // Close on Escape key
@@ -27,114 +27,9 @@ export const QuickstartDrawer: React.FC<QuickstartDrawerProps> = ({ isOpen, onCl
 
   const currentRepo = ECOSYSTEM_REPOSITORIES.find(r => r.id === selectedRepoId) || ECOSYSTEM_REPOSITORIES[0];
 
-  const getCommand = () => {
-    switch (activeTab) {
-      case 'npm':
-        return `npm install ${currentRepo.packageName}`;
-      case 'pnpm':
-        return `pnpm add ${currentRepo.packageName}`;
-      case 'bun':
-        return `bun add ${currentRepo.packageName}`;
-      case 'pip':
-        return currentRepo.pypiUrl ? `pip install ${currentRepo.id}` : `# Note: ${currentRepo.name} is primarily distributed on npm\nnpm install ${currentRepo.packageName}`;
-      case 'git':
-        return `git clone ${currentRepo.githubUrl}.git\ncd ${currentRepo.githubUrl.split('/').pop()}\nnpm install\nnpm test`;
-      case 'cdn':
-        return `<script src="https://unpkg.com/${currentRepo.packageName}/dist/index.min.js"></script>`;
-      default:
-        return `npm install ${currentRepo.packageName}`;
-    }
-  };
+  const getCommand = () => `${currentRepo.packageName}: npm package not published; no install command is available.`;
 
-  const getUsageSample = (repo: EcosystemRepo) => {
-    if (repo.id === 'open-ucp') {
-      return `import { UCPClient, createPaymentHeader } from '@nymrel/open-ucp';
-
-// 1. Initialize Autonomous Agent Purchasing Client
-const ucp = new UCPClient({
-  agentId: 'agent-sol-01',
-  budgetLimitUsd: 100.00
-});
-
-// 2. Discover & Negotiate Cart
-const cart = await ucp.negotiateCart('https://merchant.example.com/api/ucp');
-
-// 3. Settle with x402 Micropayment Header
-const receipt = await ucp.checkout(cart, {
-  paymentProof: createPaymentHeader({ amount: cart.totalUsd })
-});
-
-console.log('Purchase committed with Proof ID:', receipt.proofId);`;
-    }
-
-    if (repo.id === 'agent-action-surety') {
-      return `import { SuretyFirewall } from '@nymrel/agent-surety';
-
-// 1. Initialize Zero-Dependency Host Firewall
-const firewall = new SuretyFirewall({
-  strictMode: true,
-  rootWorkspace: process.cwd(),
-  blockDestructiveShellPatterns: true
-});
-
-// 2. Intercept Agent Proposed Tool Calls
-const decision = await firewall.inspectCommand('rm -rf dist/ && tsc');
-
-if (decision.allowed) {
-  await firewall.executeWithMerkleLog('build-step', () => {
-    // safe execution inside jail
-  });
-}`;
-    }
-
-    if (repo.id === 'nymrel-proof-ledger') {
-      return `import { MerkleTree, createAttestationReceipt } from '@nymrel/proof-ledger';
-
-// 1. Build RFC-6962 Merkle Tree of Agent Execution Steps
-const tree = new MerkleTree(['STEP_1_INIT', 'STEP_2_MUTATE_SRC', 'STEP_3_TEST_PASS']);
-const rootHash = tree.getRoot();
-
-// 2. Sign cryptographic receipt
-const receipt = createAttestationReceipt({
-  agentId: 'agent-sol-504',
-  rootHash,
-  entity: 'JalenBuilds LLC'
-});
-
-console.log('Valid proof receipt generated:', receipt.receiptId);`;
-    }
-
-    if (repo.id === 'a2ui-warm-paper') {
-      return `import React from 'react';
-import { A2UIDecisionCard, WarmPaperProvider } from 'a2ui-warm-paper';
-
-export function AgentWorkflowApp() {
-  return (
-    <WarmPaperProvider>
-      <A2UIDecisionCard
-        agentName="procurement-agent"
-        riskLevel="Low"
-        title="Approve API Token Top-up"
-        amount="$25.00"
-        onApprove={(payload) => console.log('Approved:', payload)}
-        onDeny={() => console.log('Denied')}
-      />
-    </WarmPaperProvider>
-  );
-}`;
-    }
-
-    return `import { init } from '${repo.packageName}';
-
-// Initialize ${repo.name} with Nymrel Defaults
-init({
-  entity: 'Nymrel / JalenBuilds LLC',
-  theme: 'WarmPaper'
-});
-
-console.log('${repo.name} ready for autonomous agent execution.');`;
-  };
-
+  const getUsageSample = (repo: EcosystemRepo) => `${repo.name} has no verified installation or integration evidence in this catalog.`;
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -176,11 +71,11 @@ console.log('${repo.name} ready for autonomous agent execution.');`;
         }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-              <span className="nym-badge nym-badge-cedar">Developer Quickstart</span>
-              <span style={{ fontSize: '12px', color: 'var(--nym-text-muted)' }}>1-Line Install</span>
+              <span className="nym-badge nym-badge-cedar">Release evidence</span>
+              <span style={{ fontSize: '12px', color: 'var(--nym-text-muted)' }}>No install availability</span>
             </div>
             <h2 style={{ fontSize: '22px', color: 'var(--nym-cedar)', fontFamily: 'var(--nym-font-serif)' }}>
-              Integrate Nymrel Engines
+              Catalog release status
             </h2>
           </div>
 
@@ -246,7 +141,7 @@ console.log('${repo.name} ready for autonomous agent execution.');`;
             marginBottom: '16px',
             overflowX: 'auto'
           }}>
-            {(['npm', 'pnpm', 'bun', 'pip', 'git', 'cdn'] as const).map(tab => (
+            {(['status'] as const).map(tab => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -262,7 +157,7 @@ console.log('${repo.name} ready for autonomous agent execution.');`;
                   transition: 'all 0.15s ease'
                 }}
               >
-                {tab.toUpperCase()}
+                REGISTRY STATUS
               </button>
             ))}
           </div>
@@ -298,10 +193,10 @@ console.log('${repo.name} ready for autonomous agent execution.');`;
           <div style={{ marginBottom: '24px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
               <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--nym-cedar)' }}>
-                Usage Example ({currentRepo.primaryLanguage})
+                Availability statement
               </span>
               <span style={{ fontSize: '11px', fontFamily: 'var(--nym-font-mono)', color: 'var(--nym-text-muted)' }}>
-                ESM / Node 18+
+                No install proof
               </span>
             </div>
 
@@ -323,10 +218,10 @@ console.log('${repo.name} ready for autonomous agent execution.');`;
             <Sparkles size={18} color="var(--nym-terracotta)" style={{ flexShrink: 0, marginTop: '2px' }} />
             <div>
               <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--nym-cedar)', marginBottom: '2px' }}>
-                Zero Supply-Chain Risk
+                Evidence boundary
               </div>
               <p style={{ fontSize: '12px', color: 'var(--nym-text-secondary)', lineHeight: 1.45 }}>
-                All core Nymrel algorithms are implemented with 0 external third-party dependencies. No nested npm bloat, no transient CVE vulnerabilities, and 100% auditable source code.
+                This catalog does not assert local validation, installation success, external adoption, customers, or revenue for an unpublished package.
               </p>
             </div>
           </div>
