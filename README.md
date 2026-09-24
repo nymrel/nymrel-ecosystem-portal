@@ -56,6 +56,12 @@ authoritative for repository-level acceptance.
 - The browser interface includes reduced-motion handling, keyboard search,
   labeled controls, semantic dialogs, visible focus, and responsive layouts.
 
+## External open-source contributions
+
+Upstream contribution evidence is tracked in [OPEN_SOURCE.md](OPEN_SOURCE.md).
+That index links to the authoritative external pull requests and distinguishes
+merged work from active review.
+
 ## Company identity
 
 Nymrel is the public company brand. JalenBuilds LLC is the legal entity. Nymrel
