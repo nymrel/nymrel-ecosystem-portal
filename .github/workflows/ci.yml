@@ -53,6 +53,39 @@ jobs:
       - name: Run the complete quality contract
         run: npm run check
 
+      - name: Record exact build source
+        if: matrix.node-version == 24
+        env:
+          REQUESTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          REQUESTED_BASE: ${{ github.event.pull_request.base.sha || github.sha }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { execFileSync } from 'node:child_process';
+          import { writeFileSync } from 'node:fs';
+          const git = (...args) => execFileSync('git', args, { encoding: 'utf8' }).trim();
+          const receipt = {
+            requested_head: process.env.REQUESTED_HEAD,
+            requested_base: process.env.REQUESTED_BASE,
+            checkout_commit: git('rev-parse', 'HEAD'),
+            checkout_tree: git('rev-parse', 'HEAD^{tree}'),
+            workflow_run: process.env.GITHUB_RUN_ID,
+            node: process.version,
+            npm: execFileSync('npm', ['--version'], { encoding: 'utf8' }).trim(),
+          };
+          writeFileSync('build-source-receipt.json', `${JSON.stringify(receipt, null, 2)}\n`);
+          NODE
+
+      - name: Preserve the verified static build
+        if: matrix.node-version == 24
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9  # v7.0.2
+        with:
+          name: portal-build-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            dist/
+            build-source-receipt.json
+          if-no-files-found: error
+          retention-days: 7
+
   windows:
     name: Windows contract
     runs-on: windows-2025
