@@ -47,7 +47,7 @@ authoritative for repository-level acceptance.
 
 ## Runtime and release boundary
 
-- React 19.2, TypeScript 7, Vite 8, and Oxlint are exact-lockfile dependencies.
+- React 19.3, TypeScript 7, Vite 8, and Oxlint are exact-lockfile dependencies.
 - Development and preview servers bind to loopback.
 - CI uses immutable action SHAs, minimum token permissions, locked installs, a
   Node 22/24/26 compatibility matrix, and separate supply-chain checks.
