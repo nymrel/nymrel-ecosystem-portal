@@ -58,6 +58,7 @@ describe('evidence-bounded ecosystem catalog', () => {
   it('binds every observed field to the captured public GitHub metadata', () => {
     const snapshot = JSON.parse(readFileSync(new URL('../docs/catalog-snapshot.json', import.meta.url), 'utf8'));
     assert.equal(CATALOG_CHECKED_AT, snapshot.checkedAt);
+    assert.match(CATALOG_CHECKED_AT, /^\d{4}-\d{2}-\d{2} UTC$/u);
     assert.equal(snapshot.repositories.length, ECOSYSTEM_REPOSITORIES.length);
     assert.equal(new Set(snapshot.repositories.map((row) => row.repoName)).size, snapshot.repositories.length);
     for (const repository of ECOSYSTEM_REPOSITORIES) {
@@ -68,10 +69,12 @@ describe('evidence-bounded ecosystem catalog', () => {
       assert.equal(repository.sourceDescription, captured.description ?? 'No GitHub repository description was present when this snapshot was captured.');
       assert.equal(repository.primaryLanguage, captured.language ?? 'Not reported');
       assert.equal(repository.defaultBranch, captured.defaultBranch);
+      assert.equal(repository.forkOf, captured.parentUrl);
       assert.equal(repository.lastSourceUpdate, captured.lastSourceUpdate);
       assert.deepEqual(repository.release, captured.release);
     }
     assert.equal(snapshot.repositories.find((row) => row.repoName === 'awesome-phone-call-agents')?.fork, true);
+    assert.match(ECOSYSTEM_REPOSITORIES.find((row) => row.id === 'awesome-phone-call-agents')?.name ?? '', /\(fork\)/u);
   });
 
   it('keeps both machine-readable copies generated from the same source snapshot', () => {

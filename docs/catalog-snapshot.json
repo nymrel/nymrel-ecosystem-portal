@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-05",
+  "checkedAt": "2026-11-05 UTC",
   "source": "GitHub repository search org:nymrel is:public archived:false fork:true; each repository metadata and releases/latest endpoint",
   "repositories": [
     {
@@ -30,6 +30,7 @@
     },
     {
       "repoName": "awesome-phone-call-agents",
+      "parentUrl": "https://github.com/CALLE-AI/awesome-phone-call-agents",
       "description": "Portable phone-call Agent Skills, apps, examples, adapters, and scheduler recipes for AI agents.",
       "language": null,
       "defaultBranch": "main",

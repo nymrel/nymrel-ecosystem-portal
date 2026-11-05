@@ -2,8 +2,9 @@
 
 The Nymrel Ecosystem Portal is an evidence-bounded static catalog for the public
 repositories visible in the nymrel GitHub organization. The current source
-snapshot contains 32 repositories checked on 2026-11-05, including the public
-`awesome-phone-call-agents` fork. The captured public GitHub metadata and latest
+snapshot contains 32 repositories checked on 2026-11-05 UTC, including the public
+`awesome-phone-call-agents` fork of [CALLE-AI/awesome-phone-call-agents](https://github.com/CALLE-AI/awesome-phone-call-agents).
+The captured public GitHub metadata and latest
 release responses are recorded in [docs/catalog-snapshot.json](docs/catalog-snapshot.json).
 
 The portal deliberately separates:

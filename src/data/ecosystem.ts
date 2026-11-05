@@ -4,7 +4,7 @@
  * they are not independent capability, quality, adoption, or revenue proof.
  */
 
-export const CATALOG_CHECKED_AT = '2026-11-05' as const;
+export const CATALOG_CHECKED_AT = '2026-11-05 UTC' as const;
 
 export type Category =
   | 'All'
@@ -28,6 +28,7 @@ export interface EcosystemRepo {
   name: string;
   category: RepositoryCategory;
   githubUrl: string;
+  forkOf?: string;
   sourceDescription: string;
   primaryLanguage: string;
   defaultBranch: string;
@@ -377,7 +378,8 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
   repo({
     id: 'awesome-phone-call-agents',
     repoName: 'awesome-phone-call-agents',
-    name: 'Awesome Phone Call Agents',
+    name: 'Awesome Phone Call Agents (fork)',
+    forkOf: 'https://github.com/CALLE-AI/awesome-phone-call-agents',
     category: 'Developer Tools',
     sourceDescription:
       'Portable phone-call Agent Skills, apps, examples, adapters, and scheduler recipes for AI agents.',

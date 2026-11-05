@@ -50,6 +50,7 @@ for (const category of categories) {
       '',
       '#### ' + index + '. ' + repository.name + ' (' + repository.repoName + ')',
       '- Repository: ' + repository.githubUrl,
+      ...(repository.forkOf ? ['- GitHub fork of: ' + repository.forkOf] : []),
       '- GitHub description (owner-supplied): ' + repository.sourceDescription,
       '- Primary language: ' + repository.primaryLanguage,
       '- Default branch: ' + repository.defaultBranch,

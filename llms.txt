@@ -13,7 +13,7 @@
 
 ## Catalog snapshot
 - Public repositories: 32
-- Source inventory checked: 2026-11-05
+- Source inventory checked: 2026-11-05 UTC
 - Latest GitHub releases observed: 3
 
 ### Agents & Swarms
@@ -338,8 +338,9 @@
 
 ### Developer Tools
 
-#### 27. Awesome Phone Call Agents (awesome-phone-call-agents)
+#### 27. Awesome Phone Call Agents (fork) (awesome-phone-call-agents)
 - Repository: https://github.com/nymrel/awesome-phone-call-agents
+- GitHub fork of: https://github.com/CALLE-AI/awesome-phone-call-agents
 - GitHub description (owner-supplied): Portable phone-call Agent Skills, apps, examples, adapters, and scheduler recipes for AI agents.
 - Primary language: Not reported
 - Default branch: main
