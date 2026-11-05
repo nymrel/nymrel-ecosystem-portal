@@ -25,16 +25,16 @@ const search = (query, category = 'All') => {
 describe('catalog search and filter behavior', () => {
   it('filters the five evidence categories at their captured counts', () => {
     assert.equal(search('', 'Agents & Swarms').length, 10);
-    assert.equal(search('', 'Commerce & Micropayments').length, 3);
+    assert.equal(search('', 'Commerce & Micropayments').length, 4);
     assert.equal(search('', 'Security & Sandboxing').length, 5);
     assert.equal(search('', 'UI & Machine Trust').length, 7);
-    assert.equal(search('', 'Developer Tools').length, 4);
+    assert.equal(search('', 'Developer Tools').length, 6);
   });
 
   it('searches source identity, owner description, category, and language', () => {
     assert.deepEqual(
       search('micropayments').map((repository) => repository.id),
-      ['agentic-ucp-scanner', 'headless-quote-layer', 'open-ucp'],
+      ['agentic-ucp-scanner', 'headless-quote-layer', 'nymrel-marketproof', 'open-ucp'],
     );
     assert.ok(search('python').some((repository) => repository.id === 'permitmesh'));
     assert.ok(
@@ -53,7 +53,7 @@ describe('catalog search and filter behavior', () => {
       search('typescript', 'Commerce & Micropayments').map(
         (repository) => repository.id,
       ),
-      ['agentic-ucp-scanner', 'headless-quote-layer', 'open-ucp'],
+      ['agentic-ucp-scanner', 'headless-quote-layer'],
     );
     assert.deepEqual(search('nonexistent-tool-xyz-12345'), []);
   });
