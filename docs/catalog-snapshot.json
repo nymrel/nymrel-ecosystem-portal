@@ -1,0 +1,428 @@
+{
+  "checkedAt": "2026-11-05",
+  "source": "GitHub repository search org:nymrel is:public archived:false fork:true; each repository metadata and releases/latest endpoint",
+  "repositories": [
+    {
+      "repoName": "llms-txt-generator",
+      "description": "Build a publish-ready llms.txt — a short map of your site that AI assistants can read in one pass. Runs in the browser.",
+      "language": "JavaScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T17:38:17Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-trust-scorecard",
+      "description": "Viral AI Readiness & Machine Trust Web Application (React 18 + Vite + TypeScript) in Nymrel Warm Paper design",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T18:08:43Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "awesome-phone-call-agents",
+      "description": "Portable phone-call Agent Skills, apps, examples, adapters, and scheduler recipes for AI agents.",
+      "language": null,
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-09-13T17:26:34Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": true,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "open-ucp",
+      "description": "Universal Commerce Protocol (UCP) and AI Agent Micropayments Middleware for Next.js, Express, Fastify, and FastAPI",
+      "language": "Python",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T22:49:09Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-marketproof",
+      "description": "Nymrel MarketProof — source-bound CoinMarketCap evidence receipts for AI agents",
+      "language": "Python",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-09-20T11:43:11Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "agent-sandstorm",
+      "description": "Zero-Trust Agent Execution Sandbox with Copy-on-Write Snapshots, 1-Click Rollbacks, and Secret Exfiltration Proxy",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-01T22:36:42Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-agent",
+      "description": "Explainable multi-model routing with deterministic receipts and no prompt custody.",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-10-14T05:16:05Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "release_observed",
+        "tag": "v0.4.0",
+        "publishedAt": "2026-08-28T22:57:34Z"
+      }
+    },
+    {
+      "repoName": "a2ui-warm-paper",
+      "description": "Google A2UI v0.8 declarative JSON component library rendered with Nymrel Warm Paper aesthetics",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T23:40:12Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "local-agent-forge",
+      "description": "Zero-cloud local GPU orchestrator, dynamic 85% model router, and MCP server for AI coding agents with token dollar savings ledger",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-03T08:54:50Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-swarm-studio",
+      "description": "Visual Command Center and Action Surety Deck for Multi-Agent Coding Swarms (Google A2UI v0.8, Warm Paper UI, Merkle SHA-256 Logs)",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T17:36:49Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "release_observed",
+        "tag": "v1.0.0",
+        "publishedAt": "2026-10-11T21:20:19Z"
+      }
+    },
+    {
+      "repoName": "json-ld-generator",
+      "description": "Generate schema.org JSON-LD for LocalBusiness, Product, FAQ and more, or check markup you already have. Runs in the browser.",
+      "language": "JavaScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T17:38:09Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "headless-quote-layer",
+      "description": "Zero-dependency embeddable visual quote calculator, dynamic range estimator, and lead capture widget with Warm Paper aesthetics",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-01T13:10:21Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-proof-ledger",
+      "description": "Zero-dependency cryptographic attestation and proof-of-execution protocol with RFC 6962 Merkle trees and SVG badges",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-04T21:50:27Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "agentic-ucp-scanner",
+      "description": "Zero-dependency CLI and audit engine for AI Agent Commerce Readiness, UCP, Schema.org JSON-LD, and llms.txt",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T20:49:16Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-plugin",
+      "description": "Nymrel universal plugin for ChatGPT, Codex, Claude, and MCP hosts",
+      "language": "HTML",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T22:28:04Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "agent-action-surety",
+      "description": "Deny-by-default execution safety envelope and cryptographic SHA-256 Merkle ledger for AI coding swarms",
+      "language": "Python",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-03T13:08:54Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-crawler-mesh",
+      "description": "Zero-telemetry, high-throughput web crawler and clean markdown extractor built specifically for AI agents and LLMs",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-01T22:19:33Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "qr-utm-generator",
+      "description": "QR codes with UTM tracking built into the link, so you know which flyer brought them in. Runs in the browser.",
+      "language": "JavaScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T17:38:37Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-swarm-protocol",
+      "description": "Universal Multi-Agent Swarm Protocol, Two-Seat Command Studio Contract, and File-Based Bus Engine for AI coding teams",
+      "language": "Python",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T17:36:59Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "presence",
+      "description": "An agent hits a step that needs a human. Presence pauses it, buzzes a phone, and resumes once the person has acted. Carries context and attention, never an answer. Zero deps, MIT.",
+      "language": "JavaScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T17:38:53Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "ai-visibility-scorecard",
+      "description": "Grade how findable your site is to ChatGPT, Claude, and Perplexity, with the fixes ranked by impact. Runs in the browser.",
+      "language": "JavaScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T17:38:50Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "token-spend-dashboard",
+      "description": "Paste an Anthropic or OpenAI usage export and get a spend dashboard by day and model. Nothing leaves your device.",
+      "language": "JavaScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T17:38:59Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "builderwars",
+      "description": "Same model. Your harness. Re-run every match yourself. A contest between harnesses with one-command replay verification. No dependencies, MIT.",
+      "language": "Python",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T08:31:44Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "source-read",
+      "description": "Explicit source-read outcomes without confusing unknown with success.",
+      "language": "Python",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-10-29T05:59:54Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "release_observed",
+        "tag": "v0.2.0",
+        "publishedAt": "2026-10-29T06:00:21Z"
+      }
+    },
+    {
+      "repoName": "PermitMesh",
+      "description": "A portable policy-decision profile for AI agents changing software.",
+      "language": "Python",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T21:28:17Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "noop-flags",
+      "description": "Find the CLI flags your program accepts and never reads. One file, no dependencies, MIT.",
+      "language": "Python",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T23:17:11Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-machine-trust",
+      "description": "Dual-Audience Machine Trust and AI Search Engine for Schema.org JSON-LD, llms.txt, and zero DOM drift validation",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-04T17:17:32Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-ecosystem-portal",
+      "description": "The official open-source showcase, documentation portal, and interactive hub for the Nymrel autonomous agent suite",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T18:08:16Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "chatgpt-recommends",
+      "description": "Check whether ChatGPT recommends your business. Run three buyer-intent prompts, paste the answers, get a scored verdict.",
+      "language": "JavaScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T17:39:04Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "nymrel-mcp-hub",
+      "description": null,
+      "language": "JavaScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-02T23:48:35Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "agent-beacon",
+      "description": "Zero-dependency agent liveness sentinel, heartbeat monitor, and dead-man's switch watchdog mesh for AI coding fleets",
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-03T17:06:24Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    },
+    {
+      "repoName": "agent-proofchain",
+      "description": "Provider-neutral admission decisions and tamper-evident action receipts for AI agents.",
+      "language": "Python",
+      "defaultBranch": "main",
+      "lastSourceUpdate": "2026-11-03T09:16:02Z",
+      "visibility": "public",
+      "archived": false,
+      "fork": false,
+      "release": {
+        "status": "no_release_observed"
+      }
+    }
+  ]
+}

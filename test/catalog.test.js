@@ -1,5 +1,8 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
+import { readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import {
   CATEGORIES,
   CATALOG_CHECKED_AT,
@@ -20,6 +23,7 @@ const EXPECTED_REPO_IDS = [
   'presence',
   'agentic-ucp-scanner',
   'headless-quote-layer',
+  'nymrel-marketproof',
   'open-ucp',
   'agent-action-surety',
   'agent-proofchain',
@@ -33,20 +37,48 @@ const EXPECTED_REPO_IDS = [
   'llms-txt-generator',
   'nymrel-machine-trust',
   'nymrel-trust-scorecard',
+  'awesome-phone-call-agents',
   'noop-flags',
   'nymrel-ecosystem-portal',
   'qr-utm-generator',
+  'source-read',
   'token-spend-dashboard',
 ];
 
 describe('evidence-bounded ecosystem catalog', () => {
-  it('contains the captured 29-repository public organization inventory', () => {
-    assert.equal(ECOSYSTEM_REPOSITORIES.length, 29);
+  it('contains the captured 32-repository public organization inventory', () => {
+    assert.equal(ECOSYSTEM_REPOSITORIES.length, 32);
     assert.deepEqual(
       ECOSYSTEM_REPOSITORIES.map((repository) => repository.id),
       EXPECTED_REPO_IDS,
     );
     assert.equal(new Set(EXPECTED_REPO_IDS).size, EXPECTED_REPO_IDS.length);
+  });
+
+  it('binds every observed field to the captured public GitHub metadata', () => {
+    const snapshot = JSON.parse(readFileSync(new URL('../docs/catalog-snapshot.json', import.meta.url), 'utf8'));
+    assert.equal(CATALOG_CHECKED_AT, snapshot.checkedAt);
+    assert.equal(snapshot.repositories.length, ECOSYSTEM_REPOSITORIES.length);
+    assert.equal(new Set(snapshot.repositories.map((row) => row.repoName)).size, snapshot.repositories.length);
+    for (const repository of ECOSYSTEM_REPOSITORIES) {
+      const captured = snapshot.repositories.find((row) => row.repoName === repository.repoName);
+      assert.ok(captured, repository.repoName);
+      assert.equal(captured.visibility, 'public');
+      assert.equal(captured.archived, false);
+      assert.equal(repository.sourceDescription, captured.description ?? 'No GitHub repository description was present when this snapshot was captured.');
+      assert.equal(repository.primaryLanguage, captured.language ?? 'Not reported');
+      assert.equal(repository.defaultBranch, captured.defaultBranch);
+      assert.equal(repository.lastSourceUpdate, captured.lastSourceUpdate);
+      assert.deepEqual(repository.release, captured.release);
+    }
+    assert.equal(snapshot.repositories.find((row) => row.repoName === 'awesome-phone-call-agents')?.fork, true);
+  });
+
+  it('keeps both machine-readable copies generated from the same source snapshot', () => {
+    const output = execFileSync(process.execPath, [
+      fileURLToPath(new URL('../scripts/generate-llms.mjs', import.meta.url)), '--check',
+    ], { encoding: 'utf8' });
+    assert.match(output, /llms.txt verified: 32 repositories/);
   });
 
   it('uses unique canonical GitHub source identities', () => {
@@ -101,10 +133,12 @@ describe('evidence-bounded ecosystem catalog', () => {
       (repository) => repository.release.status === 'release_observed',
     );
 
-    assert.equal(released.length, 1);
-    assert.equal(released[0]?.id, 'nymrel-agent');
-    assert.equal(released[0]?.release.tag, 'v0.4.0');
-    assert.equal(released[0]?.registryStatus, 'not_assessed');
+    assert.deepEqual(released.map((repository) => [repository.id, repository.release.tag]), [
+      ['nymrel-agent', 'v0.4.0'],
+      ['nymrel-swarm-studio', 'v1.0.0'],
+      ['source-read', 'v0.2.0'],
+    ]);
+    assert.ok(released.every((repository) => repository.registryStatus === 'not_assessed'));
   });
 
   it('keeps category totals and entity identity derived from the catalog', () => {
@@ -118,13 +152,13 @@ describe('evidence-bounded ecosystem catalog', () => {
     ]);
     assert.deepEqual(ECOSYSTEM_METRICS.categoryCounts, {
       'Agents & Swarms': 10,
-      'Commerce & Micropayments': 3,
+      'Commerce & Micropayments': 4,
       'Security & Sandboxing': 5,
       'UI & Machine Trust': 7,
-      'Developer Tools': 4,
+      'Developer Tools': 6,
     });
-    assert.equal(ECOSYSTEM_METRICS.totalRepos, 29);
-    assert.equal(ECOSYSTEM_METRICS.observedGitHubReleases, 1);
+    assert.equal(ECOSYSTEM_METRICS.totalRepos, 32);
+    assert.equal(ECOSYSTEM_METRICS.observedGitHubReleases, 3);
     assert.equal(
       ECOSYSTEM_METRICS.primaryEntities,
       'Nymrel (legalName: JalenBuilds LLC)',

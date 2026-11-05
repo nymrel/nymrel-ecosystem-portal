@@ -2,7 +2,7 @@
  * Regenerate root and public llms.txt from the evidence-bounded source catalog.
  * Requires the repository-pinned Node and npm toolchain.
  */
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -72,8 +72,16 @@ lines.push(
 );
 
 const content = lines.join('\n');
-writeFileSync(join(rootDirectory, 'llms.txt'), content);
-writeFileSync(join(rootDirectory, 'public', 'llms.txt'), content);
+const outputs = [join(rootDirectory, 'llms.txt'), join(rootDirectory, 'public', 'llms.txt')];
+if (process.argv.includes('--check')) {
+  for (const output of outputs) {
+    if (readFileSync(output, 'utf8') !== content) {
+      throw new Error(output + ' is stale; run npm run sync-llms.');
+    }
+  }
+} else {
+  for (const output of outputs) writeFileSync(output, content);
+}
 console.log(
-  'llms.txt regenerated: ' + index + ' repositories across ' + categories.length + ' categories.',
+  'llms.txt ' + (process.argv.includes('--check') ? 'verified' : 'regenerated') + ': ' + index + ' repositories across ' + categories.length + ' categories.',
 );

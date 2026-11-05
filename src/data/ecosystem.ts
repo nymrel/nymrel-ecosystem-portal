@@ -4,7 +4,7 @@
  * they are not independent capability, quality, adoption, or revenue proof.
  */
 
-export const CATALOG_CHECKED_AT = '2026-08-30' as const;
+export const CATALOG_CHECKED_AT = '2026-11-05' as const;
 
 export type Category =
   | 'All'
@@ -87,7 +87,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       "Zero-dependency agent liveness sentinel, heartbeat monitor, and dead-man's switch watchdog mesh for AI coding fleets",
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T08:07:23Z',
+    lastSourceUpdate: '2026-11-03T17:06:24Z',
   }),
   repo({
     id: 'builderwars',
@@ -98,7 +98,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Same model. Your harness. Re-run every match yourself. A contest between harnesses with one-command replay verification. No dependencies, MIT.',
     primaryLanguage: 'Python',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-29T12:20:49Z',
+    lastSourceUpdate: '2026-11-02T08:31:44Z',
   }),
   repo({
     id: 'local-agent-forge',
@@ -109,7 +109,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Zero-cloud local GPU orchestrator, dynamic 85% model router, and MCP server for AI coding agents with token dollar savings ledger',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T08:44:49Z',
+    lastSourceUpdate: '2026-11-03T08:54:50Z',
   }),
   repo({
     id: 'nymrel-agent',
@@ -120,7 +120,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Explainable multi-model routing with deterministic receipts and no prompt custody.',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T00:24:04Z',
+    lastSourceUpdate: '2026-10-14T05:16:05Z',
     release: {
       status: 'release_observed',
       tag: 'v0.4.0',
@@ -136,7 +136,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Zero-telemetry, high-throughput web crawler and clean markdown extractor built specifically for AI agents and LLMs',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T06:54:49Z',
+    lastSourceUpdate: '2026-11-01T22:19:33Z',
   }),
   repo({
     id: 'nymrel-mcp-hub',
@@ -145,9 +145,9 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
     category: 'Agents & Swarms',
     sourceDescription:
       'No GitHub repository description was present when this snapshot was captured.',
-    primaryLanguage: 'TypeScript',
+    primaryLanguage: 'JavaScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T02:50:44Z',
+    lastSourceUpdate: '2026-11-02T23:48:35Z',
   }),
   repo({
     id: 'nymrel-plugin',
@@ -156,9 +156,9 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
     category: 'Agents & Swarms',
     sourceDescription:
       'Nymrel universal plugin for ChatGPT, Codex, Claude, and MCP hosts',
-    primaryLanguage: 'Python',
+    primaryLanguage: 'HTML',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T01:11:41Z',
+    lastSourceUpdate: '2026-11-02T22:28:04Z',
   }),
   repo({
     id: 'nymrel-swarm-protocol',
@@ -169,7 +169,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Universal Multi-Agent Swarm Protocol, Two-Seat Command Studio Contract, and File-Based Bus Engine for AI coding teams',
     primaryLanguage: 'Python',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-29T23:52:55Z',
+    lastSourceUpdate: '2026-11-02T17:36:59Z',
   }),
   repo({
     id: 'nymrel-swarm-studio',
@@ -180,7 +180,12 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Visual Command Center and Action Surety Deck for Multi-Agent Coding Swarms (Google A2UI v0.8, Warm Paper UI, Merkle SHA-256 Logs)',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T06:42:52Z',
+    lastSourceUpdate: '2026-11-02T17:36:49Z',
+    release: {
+      status: 'release_observed',
+      tag: 'v1.0.0',
+      publishedAt: '2026-10-11T21:20:19Z',
+    },
   }),
   repo({
     id: 'presence',
@@ -191,7 +196,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'An agent hits a step that needs a human. Presence pauses it, buzzes a phone, and resumes once the person has acted. Carries context and attention, never an answer. Zero deps, MIT.',
     primaryLanguage: 'JavaScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-19T07:32:44Z',
+    lastSourceUpdate: '2026-11-02T17:38:53Z',
   }),
   repo({
     id: 'agentic-ucp-scanner',
@@ -202,7 +207,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Zero-dependency CLI and audit engine for AI Agent Commerce Readiness, UCP, Schema.org JSON-LD, and llms.txt',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-29T22:25:19Z',
+    lastSourceUpdate: '2026-11-02T20:49:16Z',
   }),
   repo({
     id: 'headless-quote-layer',
@@ -213,7 +218,18 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Zero-dependency embeddable visual quote calculator, dynamic range estimator, and lead capture widget with Warm Paper aesthetics',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-21T22:09:50Z',
+    lastSourceUpdate: '2026-11-01T13:10:21Z',
+  }),
+  repo({
+    id: 'nymrel-marketproof',
+    repoName: 'nymrel-marketproof',
+    name: 'Nymrel MarketProof',
+    category: 'Commerce & Micropayments',
+    sourceDescription:
+      'Nymrel MarketProof — source-bound CoinMarketCap evidence receipts for AI agents',
+    primaryLanguage: 'Python',
+    defaultBranch: 'main',
+    lastSourceUpdate: '2026-09-20T11:43:11Z',
   }),
   repo({
     id: 'open-ucp',
@@ -222,9 +238,9 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
     category: 'Commerce & Micropayments',
     sourceDescription:
       'Universal Commerce Protocol (UCP) and AI Agent Micropayments Middleware for Next.js, Express, Fastify, and FastAPI',
-    primaryLanguage: 'TypeScript',
+    primaryLanguage: 'Python',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T01:55:53Z',
+    lastSourceUpdate: '2026-11-02T22:49:09Z',
   }),
   repo({
     id: 'agent-action-surety',
@@ -235,7 +251,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Deny-by-default execution safety envelope and cryptographic SHA-256 Merkle ledger for AI coding swarms',
     primaryLanguage: 'Python',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-29T21:54:25Z',
+    lastSourceUpdate: '2026-11-03T13:08:54Z',
   }),
   repo({
     id: 'agent-proofchain',
@@ -246,7 +262,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Provider-neutral admission decisions and tamper-evident action receipts for AI agents.',
     primaryLanguage: 'Python',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-18T10:37:40Z',
+    lastSourceUpdate: '2026-11-03T09:16:02Z',
   }),
   repo({
     id: 'agent-sandstorm',
@@ -257,7 +273,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Zero-Trust Agent Execution Sandbox with Copy-on-Write Snapshots, 1-Click Rollbacks, and Secret Exfiltration Proxy',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T07:33:58Z',
+    lastSourceUpdate: '2026-11-01T22:36:42Z',
   }),
   repo({
     id: 'nymrel-proof-ledger',
@@ -268,7 +284,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Zero-dependency cryptographic attestation and proof-of-execution protocol with RFC 6962 Merkle trees and SVG badges',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T04:15:48Z',
+    lastSourceUpdate: '2026-11-04T21:50:27Z',
   }),
   repo({
     id: 'permitmesh',
@@ -279,7 +295,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'A portable policy-decision profile for AI agents changing software.',
     primaryLanguage: 'Python',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-24T21:25:37Z',
+    lastSourceUpdate: '2026-11-02T21:28:17Z',
   }),
   repo({
     id: 'a2ui-warm-paper',
@@ -290,7 +306,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Google A2UI v0.8 declarative JSON component library rendered with Nymrel Warm Paper aesthetics',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-21T21:26:00Z',
+    lastSourceUpdate: '2026-11-02T23:40:12Z',
   }),
   repo({
     id: 'ai-visibility-scorecard',
@@ -301,7 +317,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Grade how findable your site is to ChatGPT, Claude, and Perplexity, with the fixes ranked by impact. Runs in the browser.',
     primaryLanguage: 'JavaScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-21T16:54:30Z',
+    lastSourceUpdate: '2026-11-02T17:38:50Z',
   }),
   repo({
     id: 'chatgpt-recommends',
@@ -312,7 +328,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Check whether ChatGPT recommends your business. Run three buyer-intent prompts, paste the answers, get a scored verdict.',
     primaryLanguage: 'JavaScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-18T10:38:51Z',
+    lastSourceUpdate: '2026-11-02T17:39:04Z',
   }),
   repo({
     id: 'json-ld-generator',
@@ -323,7 +339,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Generate schema.org JSON-LD for LocalBusiness, Product, FAQ and more, or check markup you already have. Runs in the browser.',
     primaryLanguage: 'JavaScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-18T10:38:18Z',
+    lastSourceUpdate: '2026-11-02T17:38:09Z',
   }),
   repo({
     id: 'llms-txt-generator',
@@ -334,7 +350,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Build a publish-ready llms.txt — a short map of your site that AI assistants can read in one pass. Runs in the browser.',
     primaryLanguage: 'JavaScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-18T10:38:03Z',
+    lastSourceUpdate: '2026-11-02T17:38:17Z',
   }),
   repo({
     id: 'nymrel-machine-trust',
@@ -345,7 +361,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Dual-Audience Machine Trust and AI Search Engine for Schema.org JSON-LD, llms.txt, and zero DOM drift validation',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-30T04:42:31Z',
+    lastSourceUpdate: '2026-11-04T17:17:32Z',
   }),
   repo({
     id: 'nymrel-trust-scorecard',
@@ -356,7 +372,18 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Viral AI Readiness & Machine Trust Web Application (React 18 + Vite + TypeScript) in Nymrel Warm Paper design',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-21T21:26:16Z',
+    lastSourceUpdate: '2026-11-02T18:08:43Z',
+  }),
+  repo({
+    id: 'awesome-phone-call-agents',
+    repoName: 'awesome-phone-call-agents',
+    name: 'Awesome Phone Call Agents',
+    category: 'Developer Tools',
+    sourceDescription:
+      'Portable phone-call Agent Skills, apps, examples, adapters, and scheduler recipes for AI agents.',
+    primaryLanguage: 'Not reported',
+    defaultBranch: 'main',
+    lastSourceUpdate: '2026-09-13T17:26:34Z',
   }),
   repo({
     id: 'noop-flags',
@@ -367,7 +394,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Find the CLI flags your program accepts and never reads. One file, no dependencies, MIT.',
     primaryLanguage: 'Python',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-29T17:18:09Z',
+    lastSourceUpdate: '2026-11-02T23:17:11Z',
   }),
   repo({
     id: 'nymrel-ecosystem-portal',
@@ -378,7 +405,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'The official open-source showcase, documentation portal, and interactive hub for the Nymrel autonomous agent suite',
     primaryLanguage: 'TypeScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-24T03:00:11Z',
+    lastSourceUpdate: '2026-11-02T18:08:16Z',
   }),
   repo({
     id: 'qr-utm-generator',
@@ -389,7 +416,23 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'QR codes with UTM tracking built into the link, so you know which flyer brought them in. Runs in the browser.',
     primaryLanguage: 'JavaScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-18T10:38:33Z',
+    lastSourceUpdate: '2026-11-02T17:38:37Z',
+  }),
+  repo({
+    id: 'source-read',
+    repoName: 'source-read',
+    name: 'Source Read',
+    category: 'Developer Tools',
+    sourceDescription:
+      'Explicit source-read outcomes without confusing unknown with success.',
+    primaryLanguage: 'Python',
+    defaultBranch: 'main',
+    lastSourceUpdate: '2026-10-29T05:59:54Z',
+    release: {
+      status: 'release_observed',
+      tag: 'v0.2.0',
+      publishedAt: '2026-10-29T06:00:21Z',
+    },
   }),
   repo({
     id: 'token-spend-dashboard',
@@ -400,7 +443,7 @@ export const ECOSYSTEM_REPOSITORIES: readonly EcosystemRepo[] = [
       'Paste an Anthropic or OpenAI usage export and get a spend dashboard by day and model. Nothing leaves your device.',
     primaryLanguage: 'JavaScript',
     defaultBranch: 'main',
-    lastSourceUpdate: '2026-08-18T10:38:42Z',
+    lastSourceUpdate: '2026-11-02T17:38:59Z',
   }),
 ];
 

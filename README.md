@@ -2,7 +2,9 @@
 
 The Nymrel Ecosystem Portal is an evidence-bounded static catalog for the public
 repositories visible in the nymrel GitHub organization. The current source
-snapshot contains 29 repositories checked on 2026-08-30.
+snapshot contains 32 repositories checked on 2026-11-05, including the public
+`awesome-phone-call-agents` fork. The captured public GitHub metadata and latest
+release responses are recorded in [docs/catalog-snapshot.json](docs/catalog-snapshot.json).
 
 The portal deliberately separates:
 
@@ -39,6 +41,12 @@ src/data/ecosystem.ts is the catalog source of truth. Every record contains a
 canonical GitHub source identity, captured primary language, default branch,
 last source update, and observed latest GitHub release state. Fields not proven
 by that inventory remain explicit not_assessed states.
+
+The last source update is GitHub's repository-wide `pushed_at` timestamp, which
+can include branch pushes. A missing primary language is labeled “Not reported.”
+The snapshot query includes public, non-archived forks; it does not assert
+original authorship, maturity, or activation for any repository. A GitHub release
+is separate from a package registry publication or deployed service.
 
 Repository descriptions are displayed as “GitHub repository description” and
 must not be rewritten into independent portal claims. A repository's own
