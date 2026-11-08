@@ -8,7 +8,7 @@ const paths = [
     useWhen: 'A CI or audit check must distinguish an empty result from a source it could not read.',
     contract: 'Caller-supplied read outcomes → PASS, FAIL or UNKNOWN',
     availability: 'Tagged source · Python 3.11+',
-    guidePath: '/blob/main/README.md#install-from-the-tagged-source',
+    guidePath: '/blob/main/README.md',
     boundary: 'Your application acquires the source and defines the policy. Source Read preserves the outcome.',
   },
   {
@@ -18,7 +18,7 @@ const paths = [
     contract: 'Model metadata + constraints → selected or blocked plan',
     availability: 'Unreleased router entry · Node / Worker',
     guidePath: '/blob/main/docs/ROUTER_LIBRARY.md',
-    boundary: 'The proposed @nymrel/agent/router entry needs its exact source candidate. Existing v0.4.1 downloads lack it; the full package still installs its declared dependencies.',
+    boundary: 'The @nymrel/agent/router source entry is unreleased. Existing v0.4.1 downloads lack it; the full package still installs its declared dependencies.',
   },
   {
     repositoryId: 'permitmesh',

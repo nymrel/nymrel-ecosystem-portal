@@ -23,7 +23,7 @@ Use one component independently at a boundary in an existing stack. Follow its s
 - Use when: A CI or audit check must distinguish an empty result from a source it could not read.
 - Contract: Caller-supplied read outcomes → PASS, FAIL or UNKNOWN
 - Availability: Tagged source · Python 3.11+
-- Setup guide: https://github.com/nymrel/source-read/blob/main/README.md#install-from-the-tagged-source
+- Setup guide: https://github.com/nymrel/source-read/blob/main/README.md
 - Boundary: Your application acquires the source and defines the policy. Source Read preserves the outcome.
 - Integration feedback: https://github.com/nymrel/source-read/issues
 
@@ -32,7 +32,7 @@ Use one component independently at a boundary in an existing stack. Follow its s
 - Contract: Model metadata + constraints → selected or blocked plan
 - Availability: Unreleased router entry · Node / Worker
 - Setup guide: https://github.com/nymrel/nymrel-agent/blob/main/docs/ROUTER_LIBRARY.md
-- Boundary: The proposed @nymrel/agent/router entry needs its exact source candidate. Existing v0.4.1 downloads lack it; the full package still installs its declared dependencies.
+- Boundary: The @nymrel/agent/router source entry is unreleased. Existing v0.4.1 downloads lack it; the full package still installs its declared dependencies.
 - Integration feedback: https://github.com/nymrel/nymrel-agent/issues
 
 ### PermitMesh: Check a proposed software action

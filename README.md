@@ -19,7 +19,7 @@ deployment, customer activation, external adoption, or revenue.
 ## Build on Nymrel
 
 The developer entry offers four independent integration paths: Source Read for
-known-empty versus unavailable source outcomes; the proposed Nymrel Agent router
+known-empty versus unavailable source outcomes; the Nymrel Agent router source
 entry for caller-owned model selection; PermitMesh for software-action policy
 decisions; and Proof Ledger for artifact receipts and offline verification.
 Each path links directly to its repository's setup guide and issue tracker.
