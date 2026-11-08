@@ -16,6 +16,21 @@ The portal deliberately separates:
 A public repository is not, by itself, proof of a published package, live
 deployment, customer activation, external adoption, or revenue.
 
+## Build on Nymrel
+
+The developer entry offers four independent integration paths: Source Read for
+known-empty versus unavailable source outcomes; the proposed Nymrel Agent router
+entry for caller-owned model selection; PermitMesh for software-action policy
+decisions; and Proof Ledger for artifact receipts and offline verification.
+Each path links directly to its repository's setup guide and issue tracker.
+
+The router entry is an unreleased source candidate and is absent from existing
+v0.4.1 downloads. The other paths also retain their owning repository's source
+installation and release boundaries. No registry installation is inferred from
+a package name. `src/data/build-paths.ts` reuses canonical catalog identities and
+feeds both the visible entry and generated machine catalog. Recheck its curated
+availability notes when a component release changes.
+
 ## Local verification
 
 Use Node 24.20.0 and npm 12.0.2:

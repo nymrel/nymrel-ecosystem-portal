@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildPaths } from '../src/data/build-paths.ts';
 import {
   ECOSYSTEM_METRICS,
   ECOSYSTEM_REPOSITORIES,
@@ -32,6 +33,20 @@ const lines = [
 ];
 
 const categories = [...new Set(ECOSYSTEM_REPOSITORIES.map((repository) => repository.category))];
+lines.push('', '## Build on Nymrel',
+  'Use one component independently at a boundary in an existing stack. Follow its setup guide for the supported installation path.',
+);
+for (const path of buildPaths(ECOSYSTEM_REPOSITORIES)) {
+  lines.push('', '### ' + path.repository.name + ': ' + path.title,
+    '- Use when: ' + path.useWhen,
+    '- Contract: ' + path.contract,
+    '- Availability: ' + path.availability,
+    '- Setup guide: ' + path.guideUrl,
+    '- Boundary: ' + path.boundary,
+    '- Integration feedback: ' + path.repository.githubUrl + '/issues',
+  );
+}
+lines.push('', 'Integration reports should include the runtime, exact source/artifact version, expected behavior and result; remove credentials and private data. This portal does not measure outside adoption.');
 let index = 0;
 
 for (const category of categories) {

@@ -3,6 +3,7 @@ import { ArrowDown, Check, Copy, Cpu, Shield, Sparkles, Terminal } from 'lucide-
 import { ECOSYSTEM_METRICS } from '../data/ecosystem';
 
 interface HeroSectionProps {
+  onBuildClick: () => void;
   onExploreClick: () => void;
   onEvidenceClick: () => void;
   onQuickstartClick: () => void;
@@ -11,6 +12,7 @@ interface HeroSectionProps {
 type CopyState = 'idle' | 'copied' | 'unavailable';
 
 export const HeroSection = ({
+  onBuildClick,
   onExploreClick,
   onEvidenceClick,
   onQuickstartClick,
@@ -59,7 +61,11 @@ export const HeroSection = ({
         </p>
 
         <div className="hero-actions">
-          <button className="nym-btn-primary hero-action" type="button" onClick={onExploreClick}>
+          <button className="nym-btn-primary hero-action" type="button" onClick={onBuildClick}>
+            Build on Nymrel
+            <ArrowDown size={16} aria-hidden="true" />
+          </button>
+          <button className="nym-btn-secondary hero-action" type="button" onClick={onExploreClick}>
             Browse the snapshot
             <ArrowDown size={16} aria-hidden="true" />
           </button>
