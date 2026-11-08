@@ -273,6 +273,86 @@ pre {
   gap: 9px;
 }
 
+.build-section {
+  padding: 64px 0;
+  border-top: 1px solid var(--nym-border-default);
+  border-bottom: 1px solid var(--nym-border-default);
+  background: var(--nym-bg-subtle);
+}
+
+.build-section h2 {
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.build-section .section-kicker {
+  color: var(--nym-cedar);
+}
+
+.build-intro {
+  max-width: 70ch;
+  margin-top: 12px;
+  color: var(--nym-text-secondary);
+}
+
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.build-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid var(--nym-border-default);
+  border-radius: var(--nym-radius-md);
+  background: var(--nym-bg-elevated);
+  padding: 24px;
+  overflow-wrap: anywhere;
+}
+
+.build-card h3 {
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.build-repository,
+.build-availability {
+  color: var(--nym-text-muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.build-contract {
+  border-left: 3px solid var(--nym-terracotta);
+  padding-left: 12px;
+  color: var(--nym-cedar);
+  font-family: var(--nym-font-mono);
+  font-size: 13px;
+}
+
+.build-boundary,
+.build-feedback {
+  color: var(--nym-text-secondary);
+  font-size: 14px;
+}
+
+.build-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 13px;
+}
+
+.build-feedback {
+  max-width: 84ch;
+  margin-top: 24px;
+}
+
 .nym-btn-primary,
 .nym-btn-secondary,
 .nym-btn-accent,

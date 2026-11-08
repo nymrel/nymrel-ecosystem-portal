@@ -16,6 +16,43 @@
 - Source inventory checked: 2026-11-05 UTC
 - Latest GitHub releases observed: 3
 
+## Build on Nymrel
+Use one component independently at a boundary in an existing stack. Follow its setup guide for the supported installation path.
+
+### Source Read: Keep unavailable sources visible
+- Use when: A CI or audit check must distinguish an empty result from a source it could not read.
+- Contract: Caller-supplied read outcomes → PASS, FAIL or UNKNOWN
+- Availability: Tagged source · Python 3.11+
+- Setup guide: https://github.com/nymrel/source-read/blob/main/README.md
+- Boundary: Your application acquires the source and defines the policy. Source Read preserves the outcome.
+- Integration feedback: https://github.com/nymrel/source-read/issues
+
+### Nymrel Agent: Route with metadata you control
+- Use when: An orchestrator or browser worker needs a deterministic selection before calling its own model SDK.
+- Contract: Model metadata + constraints → selected or blocked plan
+- Availability: Unreleased router entry · Node / Worker
+- Setup guide: https://github.com/nymrel/nymrel-agent/blob/main/docs/ROUTER_LIBRARY.md
+- Boundary: The @nymrel/agent/router source entry is unreleased. Existing v0.4.1 downloads lack it; the full package still installs its declared dependencies.
+- Integration feedback: https://github.com/nymrel/nymrel-agent/issues
+
+### PermitMesh: Check a proposed software action
+- Use when: An agent host needs path, operation, approval and budget checks before dispatching a tool.
+- Contract: Permit + proposed action → allow / deny + reason codes
+- Availability: Source candidate · Python 3.11–3.14
+- Setup guide: https://github.com/nymrel/PermitMesh/blob/main/README.md#thirty-second-demo
+- Boundary: Your authenticated host enforces the decision, owns nonce consumption and stops denied actions.
+- Integration feedback: https://github.com/nymrel/PermitMesh/issues
+
+### Nymrel Proof Ledger: Hand off a verifiable artifact
+- Use when: A build or automation producer needs to send artifact bytes with a receipt another process can verify offline.
+- Contract: Artifact + signer record → receipt → configured verifier
+- Availability: Source installation · Node / Python
+- Setup guide: https://github.com/nymrel/nymrel-proof-ledger/blob/main/docs/QUICKSTART.md
+- Boundary: The verifier supplies a trusted key and checks the artifact. A receipt does not establish execution or signer authority.
+- Integration feedback: https://github.com/nymrel/nymrel-proof-ledger/issues
+
+Integration reports should include the runtime, exact source/artifact version, expected behavior and result; remove credentials and private data. This portal does not measure outside adoption.
+
 ### Agents & Swarms
 
 #### 1. Agent Beacon (agent-beacon)
