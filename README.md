@@ -23,6 +23,11 @@ an installed Source Read walkthrough that distinguishes a complete empty
 inventory, findings and an unavailable source. It uses the published 0.2.0 API,
 with separate, explicit source-candidate paths for later integrations.
 
+For a routing decision, signed task claim or scoped CLI scan, try
+[Review the next automation handoff](docs/AUTOMATION_HANDOFFS.md). It offers three
+independent local walkthroughs pinned to merged, unreleased source, with
+selected/blocked, authenticated-failure and incomplete-scan examples.
+
 The developer entry offers four independent integration paths: Source Read for
 known-empty versus unavailable source outcomes; the Nymrel Agent router source
 entry for caller-owned model selection; PermitMesh for software-action policy
