@@ -47,6 +47,11 @@ for (const path of buildPaths(ECOSYSTEM_REPOSITORIES)) {
   );
 }
 lines.push('', 'Integration reports should include the runtime, exact source/artifact version, expected behavior and result; remove credentials and private data. This portal does not measure outside adoption.');
+lines.push('', '## Developer walkthrough',
+  '- A failed read is not an empty result: https://github.com/nymrel/nymrel-ecosystem-portal/blob/main/docs/EMPTY_IS_NOT_UNAVAILABLE.md',
+  '- Runnable consumer: https://github.com/nymrel/nymrel-ecosystem-portal/blob/main/examples/source-check.py',
+  '- Uses published Source Read 0.2.0 for complete empty, findings and unavailable cases; later source candidates are labeled separately.',
+);
 let index = 0;
 
 for (const category of categories) {
