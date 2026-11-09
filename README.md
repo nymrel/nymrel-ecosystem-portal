@@ -18,6 +18,11 @@ deployment, customer activation, external adoption, or revenue.
 
 ## Build on Nymrel
 
+Start with [A failed read is not an empty result](docs/EMPTY_IS_NOT_UNAVAILABLE.md):
+an installed Source Read walkthrough that distinguishes a complete empty
+inventory, findings and an unavailable source. It uses the published 0.2.0 API,
+with separate, explicit source-candidate paths for later integrations.
+
 The developer entry offers four independent integration paths: Source Read for
 known-empty versus unavailable source outcomes; the Nymrel Agent router source
 entry for caller-owned model selection; PermitMesh for software-action policy
