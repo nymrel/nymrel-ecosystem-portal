@@ -40,7 +40,12 @@ Use Python 3.11 or newer. Source Read is not published on PyPI; install the
 reviewed source asset rather than a similarly named registry package. Its
 SHA-256 URL fragment lets pip check the source ZIP before building it:
 
+Start in a new consuming directory outside the portal and Source Read checkouts.
+Stay in that directory for every command below:
+
 ```text
+mkdir source-check-consumer
+cd source-check-consumer
 python -m venv ../source-read-demo
 ```
 
@@ -56,8 +61,8 @@ On Windows, use `../source-read-demo/Scripts/python` in place of
 build environment; the owning repository documents its separate
 [hash-locked build validation](https://github.com/nymrel/source-read/blob/main/CONTRIBUTING.md).
 
-Copy [source-check.py](../examples/source-check.py) into a separate consuming
-directory. It reads a controlled UTF-8 JSON file, accepts one complete array of
+Copy [source-check.py](../examples/source-check.py) into that consuming directory.
+It reads a controlled UTF-8 JSON file, accepts one complete array of
 findings, and caps input at 64 KiB. Create two synthetic files there:
 
 ```text
