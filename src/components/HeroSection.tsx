@@ -61,14 +61,17 @@ export const HeroSection = ({
         </p>
 
         <div className="hero-actions">
-          <button className="nym-btn-primary hero-action" type="button" onClick={onBuildClick}>
-            Build on Nymrel
+          <button className="nym-btn-primary hero-action" type="button" onClick={onExploreClick}>
+            Explore the projects
             <ArrowDown size={16} aria-hidden="true" />
           </button>
-          <button className="nym-btn-secondary hero-action" type="button" onClick={onExploreClick}>
-            Browse the snapshot
+          <button className="nym-btn-secondary hero-action" type="button" onClick={onBuildClick}>
+            Developer guides
             <ArrowDown size={16} aria-hidden="true" />
           </button>
+          <a className="nym-btn-secondary hero-action" href="/llms.txt">
+            Agent catalog
+          </a>
           <button className="nym-btn-accent hero-action" type="button" onClick={onEvidenceClick}>
             <Sparkles size={16} aria-hidden="true" />
             Inspect the evidence model
@@ -78,6 +81,12 @@ export const HeroSection = ({
             Check out source
           </button>
         </div>
+
+        <p className="boundary-note">
+          Just exploring? Browse project descriptions without installing anything.
+          Developers can follow the integration guides. Agents can read the structured
+          catalog and each repository’s own input, output and setup contracts.
+        </p>
 
         <div className="checkout-strip" aria-label="Portal source checkout command">
           <Terminal size={16} aria-hidden="true" />
