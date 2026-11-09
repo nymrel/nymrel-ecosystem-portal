@@ -14,13 +14,17 @@ from source_read import SourceRead, assess_check
 MAX_BYTES = 64 * 1024
 
 
+def reject_non_json_constant(_value):
+    raise ValueError("inventory contains a non-JSON numeric constant")
+
+
 def read_inventory(path):
     try:
         with path.open("rb") as stream:
             raw = stream.read(MAX_BYTES + 1)
         if len(raw) > MAX_BYTES:
             raise ValueError("inventory exceeds the example size limit")
-        value = json.loads(raw.decode("utf-8"))
+        value = json.loads(raw.decode("utf-8"), parse_constant=reject_non_json_constant)
         if not isinstance(value, list):
             raise ValueError("inventory must be one complete JSON array")
     except (OSError, UnicodeError, ValueError, RecursionError) as error:
