@@ -2,9 +2,10 @@
  * Regenerate root and public llms.txt from the evidence-bounded source catalog.
  * Requires the repository-pinned Node and npm toolchain.
  */
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildPaths } from '../src/data/build-paths.ts';
 import {
   ECOSYSTEM_METRICS,
   ECOSYSTEM_REPOSITORIES,
@@ -32,6 +33,25 @@ const lines = [
 ];
 
 const categories = [...new Set(ECOSYSTEM_REPOSITORIES.map((repository) => repository.category))];
+lines.push('', '## Build on Nymrel',
+  'Use one component independently at a boundary in an existing stack. Follow its setup guide for the supported installation path.',
+);
+for (const path of buildPaths(ECOSYSTEM_REPOSITORIES)) {
+  lines.push('', '### ' + path.repository.name + ': ' + path.title,
+    '- Use when: ' + path.useWhen,
+    '- Contract: ' + path.contract,
+    '- Availability: ' + path.availability,
+    '- Setup guide: ' + path.guideUrl,
+    '- Boundary: ' + path.boundary,
+    '- Integration feedback: ' + path.repository.githubUrl + '/issues',
+  );
+}
+lines.push('', 'Integration reports should include the runtime, exact source/artifact version, expected behavior and result; remove credentials and private data. This portal does not measure outside adoption.');
+lines.push('', '## Developer walkthrough',
+  '- A failed read is not an empty result: https://github.com/nymrel/nymrel-ecosystem-portal/blob/main/docs/EMPTY_IS_NOT_UNAVAILABLE.md',
+  '- Runnable consumer: https://github.com/nymrel/nymrel-ecosystem-portal/blob/main/examples/source-check.py',
+  '- Uses published Source Read 0.2.0 for complete empty, findings and unavailable cases; later source candidates are labeled separately.',
+);
 let index = 0;
 
 for (const category of categories) {
@@ -50,6 +70,7 @@ for (const category of categories) {
       '',
       '#### ' + index + '. ' + repository.name + ' (' + repository.repoName + ')',
       '- Repository: ' + repository.githubUrl,
+      ...(repository.forkOf ? ['- GitHub fork of: ' + repository.forkOf] : []),
       '- GitHub description (owner-supplied): ' + repository.sourceDescription,
       '- Primary language: ' + repository.primaryLanguage,
       '- Default branch: ' + repository.defaultBranch,
@@ -72,8 +93,16 @@ lines.push(
 );
 
 const content = lines.join('\n');
-writeFileSync(join(rootDirectory, 'llms.txt'), content);
-writeFileSync(join(rootDirectory, 'public', 'llms.txt'), content);
+const outputs = [join(rootDirectory, 'llms.txt'), join(rootDirectory, 'public', 'llms.txt')];
+if (process.argv.includes('--check')) {
+  for (const output of outputs) {
+    if (readFileSync(output, 'utf8') !== content) {
+      throw new Error(output + ' is stale; run npm run sync-llms.');
+    }
+  }
+} else {
+  for (const output of outputs) writeFileSync(output, content);
+}
 console.log(
-  'llms.txt regenerated: ' + index + ' repositories across ' + categories.length + ' categories.',
+  'llms.txt ' + (process.argv.includes('--check') ? 'verified' : 'regenerated') + ': ' + index + ' repositories across ' + categories.length + ' categories.',
 );

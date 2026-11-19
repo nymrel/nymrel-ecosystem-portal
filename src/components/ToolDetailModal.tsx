@@ -87,6 +87,12 @@ export const ToolDetailModal = ({ repository, onClose }: ToolDetailModalProps) =
           </div>
 
           <dl className="evidence-list">
+            {repository.forkOf && (
+              <div>
+                <dt>GitHub fork of</dt>
+                <dd><a href={repository.forkOf} target="_blank" rel="noreferrer">{repository.forkOf}</a></dd>
+              </div>
+            )}
             <div>
               <dt>Source inventory checked</dt>
               <dd>{repository.sourceCheckedAt}</dd>

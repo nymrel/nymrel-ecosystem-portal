@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BuildPaths } from './components/BuildPaths';
 import { DualAudienceFooter } from './components/DualAudienceFooter';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
@@ -21,7 +22,7 @@ export const App = () => {
   return (
     <div id="top" className="app-shell">
       <a className="skip-link" href="#main-content">
-        Skip to catalog
+        Skip to main content
       </a>
       <Header
         searchQuery={searchQuery}
@@ -31,10 +32,12 @@ export const App = () => {
       />
       <main id="main-content">
         <HeroSection
+          onBuildClick={() => scrollToSection('build-on-nymrel')}
           onExploreClick={() => scrollToSection('repositories')}
           onEvidenceClick={() => scrollToSection('evidence-explorer')}
           onQuickstartClick={() => setIsQuickstartOpen(true)}
         />
+        <BuildPaths />
         <ToolGrid
           searchQuery={searchQuery}
           onClearSearch={() => setSearchQuery('')}
