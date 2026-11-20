@@ -22,6 +22,27 @@ export interface ReleaseEvidence {
   publishedAt?: string;
 }
 
+export interface NpmObservation {
+  packageName: string;
+  checkedAt: string;
+  status: 'not_found';
+}
+
+const NPM_CHECKED_AT = '2026-11-20 02:50 UTC' as const;
+
+const npmObservations: Readonly<Record<string, NpmObservation>> = {
+  'nymrel-swarm-studio': { packageName: 'nymrel-swarm-studio', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+  'open-ucp': { packageName: '@nymrel/open-ucp', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+  'agent-sandstorm': { packageName: '@nymrel/agent-sandstorm', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+  'agentic-ucp-scanner': { packageName: 'agentic-ucp-scanner', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+  'a2ui-warm-paper': { packageName: 'a2ui-warm-paper', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+  'agent-action-surety': { packageName: '@nymrel/agent-surety', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+  'nymrel-machine-trust': { packageName: '@nymrel/machine-trust', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+  'nymrel-proof-ledger': { packageName: '@nymrel/proof-ledger', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+  'local-agent-forge': { packageName: '@nymrel/local-forge', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+  'headless-quote-layer': { packageName: '@nymrel/headless-quote', checkedAt: NPM_CHECKED_AT, status: 'not_found' },
+};
+
 export interface EcosystemRepo {
   id: string;
   repoName: string;
@@ -37,6 +58,7 @@ export interface EcosystemRepo {
   sourceCheckoutCommand: string;
   release: ReleaseEvidence;
   registryStatus: 'not_assessed';
+  npmObservation?: NpmObservation;
   licenseStatus: 'not_assessed';
   validationStatus: 'not_assessed_by_portal';
   adoptionStatus: 'not_assessed';
@@ -72,6 +94,7 @@ const repo = (
   sourceCheckoutCommand: 'git clone https://github.com/nymrel/' + input.repoName + '.git',
   release: input.release ?? { status: 'no_release_observed' },
   registryStatus: 'not_assessed',
+  ...(npmObservations[input.repoName] ? { npmObservation: npmObservations[input.repoName] } : {}),
   licenseStatus: 'not_assessed',
   validationStatus: 'not_assessed_by_portal',
   adoptionStatus: 'not_assessed',

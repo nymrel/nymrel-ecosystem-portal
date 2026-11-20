@@ -121,6 +121,15 @@ export const ToolDetailModal = ({ repository, onClose }: ToolDetailModalProps) =
               <dt>Package registry</dt>
               <dd>{evidenceLabel(repository.registryStatus)}</dd>
             </div>
+            {repository.npmObservation && (
+              <div>
+                <dt>npm package name observation</dt>
+                <dd>
+                  {repository.npmObservation.packageName} returned 404 on{' '}
+                  {repository.npmObservation.checkedAt}. This observation applies only to this name.
+                </dd>
+              </div>
+            )}
             <div>
               <dt>License</dt>
               <dd>{evidenceLabel(repository.licenseStatus)}</dd>

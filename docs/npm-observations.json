@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-11-20T02:50:45.894166+00:00",
+  "source": "https://registry.npmjs.org/",
+  "observations": [
+    {
+      "repository": "nymrel/nymrel-swarm-studio",
+      "packageName": "nymrel-swarm-studio",
+      "sourceCommit": "5fe5cc2e99ff6b29bf154c71ed3d6d33141eff4a",
+      "registryUrl": "https://registry.npmjs.org/nymrel-swarm-studio",
+      "httpStatus": 404
+    },
+    {
+      "repository": "nymrel/open-ucp",
+      "packageName": "@nymrel/open-ucp",
+      "sourceCommit": "d4c1b88e5d7a03c52d116a322ee6dfd2b65d7ff0",
+      "registryUrl": "https://registry.npmjs.org/@nymrel%2Fopen-ucp",
+      "httpStatus": 404
+    },
+    {
+      "repository": "nymrel/agent-sandstorm",
+      "packageName": "@nymrel/agent-sandstorm",
+      "sourceCommit": "f13bb96aacac0d60559e6da01fc3b4f992d96917",
+      "registryUrl": "https://registry.npmjs.org/@nymrel%2Fagent-sandstorm",
+      "httpStatus": 404
+    },
+    {
+      "repository": "nymrel/agentic-ucp-scanner",
+      "packageName": "agentic-ucp-scanner",
+      "sourceCommit": "676bf804be98b040f7285c082aee326a38d75441",
+      "registryUrl": "https://registry.npmjs.org/agentic-ucp-scanner",
+      "httpStatus": 404
+    },
+    {
+      "repository": "nymrel/a2ui-warm-paper",
+      "packageName": "a2ui-warm-paper",
+      "sourceCommit": "54ab608c2610b59b7398f9eb3268c96fd91c0876",
+      "registryUrl": "https://registry.npmjs.org/a2ui-warm-paper",
+      "httpStatus": 404
+    },
+    {
+      "repository": "nymrel/agent-action-surety",
+      "packageName": "@nymrel/agent-surety",
+      "sourceCommit": "a659860e94bb75f3d549e9f482134ddbed5db2d8",
+      "registryUrl": "https://registry.npmjs.org/@nymrel%2Fagent-surety",
+      "httpStatus": 404
+    },
+    {
+      "repository": "nymrel/nymrel-machine-trust",
+      "packageName": "@nymrel/machine-trust",
+      "sourceCommit": "bc4269874d4cfa0f2a637f919df447a85f1dcd9f",
+      "registryUrl": "https://registry.npmjs.org/@nymrel%2Fmachine-trust",
+      "httpStatus": 404
+    },
+    {
+      "repository": "nymrel/nymrel-proof-ledger",
+      "packageName": "@nymrel/proof-ledger",
+      "sourceCommit": "1f449921f7af0a3f0b4f61ec63b0642980dd7315",
+      "registryUrl": "https://registry.npmjs.org/@nymrel%2Fproof-ledger",
+      "httpStatus": 404
+    },
+    {
+      "repository": "nymrel/local-agent-forge",
+      "packageName": "@nymrel/local-forge",
+      "sourceCommit": "fde4754103aef8f7a457ca2295ee3a3dfd6065b3",
+      "registryUrl": "https://registry.npmjs.org/@nymrel%2Flocal-forge",
+      "httpStatus": 404
+    },
+    {
+      "repository": "nymrel/headless-quote-layer",
+      "packageName": "@nymrel/headless-quote",
+      "sourceCommit": "aded971713288dffe144f55a15c975da2d091435",
+      "registryUrl": "https://registry.npmjs.org/@nymrel%2Fheadless-quote",
+      "httpStatus": 404
+    }
+  ]
+}

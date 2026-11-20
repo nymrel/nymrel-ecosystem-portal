@@ -106,6 +106,25 @@ describe('evidence-bounded ecosystem catalog', () => {
     }
   });
 
+  it('reports scoped, dated npm observations only for captured package names', () => {
+    const snapshot = JSON.parse(readFileSync(new URL('../docs/npm-observations.json', import.meta.url), 'utf8'));
+    assert.equal(snapshot.observations.length, 10);
+    assert.equal(new Set(snapshot.observations.map((row) => row.repository)).size, 10);
+    const observed = ECOSYSTEM_REPOSITORIES.filter((repository) => repository.npmObservation);
+    assert.equal(observed.length, snapshot.observations.length);
+    for (const repository of observed) {
+      const captured = snapshot.observations.find((row) => row.repository === 'nymrel/' + repository.repoName);
+      assert.ok(captured, repository.repoName);
+      assert.equal(repository.npmObservation.packageName, captured.packageName);
+      assert.equal(repository.npmObservation.checkedAt, '2026-11-20 02:50 UTC');
+      assert.equal(repository.npmObservation.status, 'not_found');
+      assert.equal(captured.httpStatus, 404);
+      assert.match(captured.sourceCommit, /^[0-9a-f]{40}$/u);
+      assert.equal(new URL(captured.registryUrl).origin, 'https://registry.npmjs.org');
+      assert.equal(decodeURIComponent(new URL(captured.registryUrl).pathname.slice(1)), captured.packageName);
+    }
+  });
+
   it('keeps unverified boundary states explicit instead of inferring them', () => {
     for (const repository of ECOSYSTEM_REPOSITORIES) {
       assert.equal(repository.registryStatus, 'not_assessed');
